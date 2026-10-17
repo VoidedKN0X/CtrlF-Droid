@@ -97,7 +97,14 @@ jobs:
         env:
           REPO_KEYSTORE_PASSWORD: ${{ secrets.REPO_KEYSTORE_PASSWORD }}
           REPO_KEY_ALIAS: ${{ vars.REPO_KEY_ALIAS }}
-        run: fdroid update --use-date-from-apk --pretty
+        run: |
+          set -o pipefail
+          if ! fdroid update --use-date-from-apk --pretty 2>&1 | tee "$RUNNER_TEMP/fdroid.log"; then
+            # Surface the reason as an annotation (fdroid never prints the passwords).
+            msg=$(grep -E 'CRITICAL|ERROR|Error|Traceback' -A3 "$RUNNER_TEMP/fdroid.log" | tail -n 20 | sed 's/%/%25/g' | sed ':a;N;$!ba;s/\n/%0A/g')
+            echo "::error title=fdroid update failed::${msg:-see log}"
+            exit 1
+          fi
 
       - name: Remove the signing key
         if: always()
