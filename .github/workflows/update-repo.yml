@@ -32,7 +32,7 @@ jobs:
 
       - name: Install F-Droid tools
         # Pinned: this job holds the repo signing key.
-        run: pip install fdroidserver==2.4.4 qrcode==8.2
+        run: pip install fdroidserver==2.4.5 qrcode==8.2
 
       - name: Download and check the latest APK and release notes of every app
         env:
