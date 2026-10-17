@@ -24,7 +24,7 @@ Add this repo to F-Droid, Droid-ify or Neo Store and get every Ctrl app with aut
 
 Every 3 hours (and on every push), a GitHub Actions workflow:
 
-1. Downloads the latest release APK of each app listed in [`apps.txt`](apps.txt).
+1. Downloads the latest release APK of each app listed in [`apps.txt`](apps.txt), and turns its release notes into the app's "What's new".
 2. Runs `fdroid update` from the official [F-Droid tools](https://gitlab.com/fdroid/fdroidserver) to build and sign the repo index.
 3. Publishes the repo and the landing page to GitHub Pages.
 

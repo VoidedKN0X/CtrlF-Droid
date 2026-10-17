@@ -30,7 +30,7 @@ jobs:
       - name: Install F-Droid tools
         run: pip install fdroidserver qrcode
 
-      - name: Download the latest APK of every app
+      - name: Download the latest APK and release notes of every app
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -38,9 +38,19 @@ jobs:
           cp assets/icon.png repo/icons/icon.png
           grep -v '^#' apps.txt | sed '/^$/d' | while read -r app; do
             echo "::group::$app"
-            if ! gh release download --repo "$app" --pattern '*.apk' --dir repo --clobber; then
+            dl="$RUNNER_TEMP/dl/${app#*/}"
+            mkdir -p "$dl"
+            if ! gh release download --repo "$app" --pattern '*.apk' --dir "$dl" --clobber; then
               echo "::warning::No APK found in the latest release of $app"
+              echo "::endgroup::"
+              continue
             fi
+            # The release notes become the app's "What's new" in F-Droid clients.
+            gh release view --repo "$app" --json body --jq .body > "$dl/notes.md" || true
+            for apk in "$dl"/*.apk; do
+              python scripts/whats_new.py "$apk" "$dl/notes.md" || echo "::warning::Couldn't add What's new for $app"
+              mv "$apk" repo/
+            done
             echo "::endgroup::"
           done
           ls -la repo
