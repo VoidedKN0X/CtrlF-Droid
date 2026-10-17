@@ -1,0 +1,20 @@
+Categories:
+- Multimedia
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/ImmichCtrl
+SourceCode: https://github.com/VoidedKN0X/ImmichCtrl
+IssueTracker: https://github.com/VoidedKN0X/ImmichCtrl/issues
+Changelog: https://github.com/VoidedKN0X/ImmichCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: ImmichCtrl
+Summary: Photos and backup for your Immich server
+Description: |
+  A native Android app for self-hosted Immich photo servers (2.x and 3.x).
+
+  * Fast timeline, even with huge libraries
+  * Automatic backup of the albums you choose
+  * Albums, shared albums, favourites, archive and locked folder
+  * Smart search, people, places and a map
+  * Memories, partner sharing and shared links
+  * Several servers and accounts

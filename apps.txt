@@ -1,0 +1,10 @@
+# One app repo per line (owner/repo). The latest release's .apk is added to the F-Droid repo.
+VoidedKN0X/BeamCtrl
+VoidedKN0X/CraftyCtrl
+VoidedKN0X/ElementCtrl
+VoidedKN0X/FilesCtrl
+VoidedKN0X/FrigateCtrl
+VoidedKN0X/ImmichCtrl
+VoidedKN0X/JellyCtrl
+VoidedKN0X/NaviCtrl
+VoidedKN0X/SeerrCtrl

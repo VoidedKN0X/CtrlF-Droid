@@ -1,0 +1,13 @@
+# F-Droid repo settings. Secrets come from GitHub Actions; nothing secret is stored here.
+repo_url: https://voidedkn0x.github.io/CtrlF-Droid/repo
+repo_name: CtrlF-Droid
+repo_icon: icon.png
+repo_description: >-
+  The VKNXWorks Ctrl series: free and open-source Android apps for self-hosted
+  services like Jellyfin, Immich, Navidrome, Frigate, Seerr and Matrix.
+  Updated automatically from each app's GitHub releases.
+
+archive_older: 0
+
+# keystore, repo_keyalias, keystorepass, keypass and sdk_path are added by the
+# workflow at build time from the repo's Actions secrets and variables.

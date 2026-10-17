@@ -1,0 +1,23 @@
+Categories:
+- Multimedia
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/JellyCtrl
+SourceCode: https://github.com/VoidedKN0X/JellyCtrl
+IssueTracker: https://github.com/VoidedKN0X/JellyCtrl/issues
+Changelog: https://github.com/VoidedKN0X/JellyCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: JellyCtrl
+Summary: Movies, shows, music and Live TV from Jellyfin
+Description: |
+  A native Android app for Jellyfin.
+
+  * Media3 player with an automatic mpv fallback, so almost everything plays directly
+  * Skip intro, recap and credits; next-episode autoplay
+  * Music with background playback and synced lyrics
+  * Live TV with a guide and recordings
+  * Downloads for offline viewing
+  * Full admin dashboard for server owners
+  * Phone, tablet and foldable layouts
+
+  Needs Jellyfin 10.9 or newer.
