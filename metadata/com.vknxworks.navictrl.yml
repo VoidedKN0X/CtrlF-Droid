@@ -18,3 +18,8 @@ Description: |
   * Background playback, synced lyrics and sleep timer
   * Downloads for offline listening
   * Scrobbling to Last.fm and ListenBrainz through Navidrome
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 20786f2652f1d327f8fcc18b3dd543066fad333490e23bfe00349309a110fefc

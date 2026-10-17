@@ -18,3 +18,8 @@ Description: |
   * Smart search, people, places and a map
   * Memories, partner sharing and shared links
   * Several servers and accounts
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- b014db86acb9843b307027f9233ba44589e26d7c0a552bd193a0967556aec923

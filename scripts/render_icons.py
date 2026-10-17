@@ -8,10 +8,13 @@ middle area and rounds the corners, so the result looks like the home-screen ico
 """
 import re
 import sys
+from xml.sax.saxutils import quoteattr
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
 A = "{http://schemas.android.com/apk/res/android}"
+PACKAGE_RE = re.compile(r"^[A-Za-z][A-Za-z0-9_]*(\.[A-Za-z][A-Za-z0-9_]*)+$")
+HEX_RE = re.compile(r"^[0-9A-Fa-f]{8}$")
 AAPT = "{http://schemas.android.com/aapt}"
 
 app_dir = Path(sys.argv[1])
@@ -53,6 +56,8 @@ def resolve_color(value, depth=0):
         h = "".join(ch * 2 for ch in h)
     if len(h) == 6:
         h = "FF" + h
+    if not HEX_RE.match(h):  # only plain hex colours reach the SVG
+        return None
     alpha = int(h[0:2], 16) / 255
     return "#" + h[2:].lower(), alpha
 
@@ -135,7 +140,7 @@ def convert(el):
             if child.tag == "clip-path":
                 counter[0] += 1
                 clip = f"c{counter[0]}"
-                defs.append(f'<clipPath id="{clip}"><path d="{child.get(A + "pathData")}"/></clipPath>')
+                defs.append(f'<clipPath id="{clip}"><path d={quoteattr(child.get(A + "pathData") or "")}/></clipPath>')
                 continue
             s = convert(child)
             if s:
@@ -145,7 +150,7 @@ def convert(el):
         d = el.get(A + "pathData")
         if not d:
             return ""
-        attrs = [f'd="{d}"']
+        attrs = [f"d={quoteattr(d)}"]
         fill = paint(el, "fillColor")
         if fill:
             attrs.append(f'fill="{fill[0]}" fill-opacity="{fill[1] * num(el, "fillAlpha", 1):.3f}"')
@@ -163,11 +168,11 @@ def convert(el):
             cap = el.get(A + "strokeLineCap")
             join = el.get(A + "strokeLineJoin")
             if cap:
-                attrs.append(f'stroke-linecap="{cap}"')
+                attrs.append(f"stroke-linecap={quoteattr(cap)}")
             if join:
-                attrs.append(f'stroke-linejoin="{join}"')
+                attrs.append(f"stroke-linejoin={quoteattr(join)}")
             if el.get(A + "strokeMiterLimit"):
-                attrs.append(f'stroke-miterlimit="{el.get(A + "strokeMiterLimit")}"')
+                attrs.append(f"stroke-miterlimit={quoteattr(el.get(A + 'strokeMiterLimit'))}")
         return f'<path {" ".join(attrs)}/>'
     return ""
 
@@ -219,4 +224,7 @@ out_file.write_text(svg)
 
 gradle = (app_dir / "app" / "build.gradle.kts").read_text()
 m = re.search(r'applicationId\s*=\s*"([^"]+)"', gradle)
-print(m.group(1) if m else "")
+package = m.group(1) if m else ""
+if not PACKAGE_RE.match(package):  # used as a folder name by the workflow
+    raise SystemExit(f"No valid applicationId in {app_dir}/app/build.gradle.kts")
+print(package)

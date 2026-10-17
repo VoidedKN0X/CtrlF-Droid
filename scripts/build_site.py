@@ -5,6 +5,7 @@ Reads repo/index-v1.json (written by `fdroid update`) and metadata/*.yml.
 """
 import html
 import json
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -19,6 +20,8 @@ SITE = ROOT / "_site"
 REPO_URL = "https://voidedkn0x.github.io/CtrlF-Droid/repo"
 
 fingerprint = sys.argv[1].replace(":", "").strip().upper()
+if not re.fullmatch(r"[0-9A-F]{64}", fingerprint):
+    raise SystemExit("Expected the repo's SHA-256 signing fingerprint as the argument")
 add_https = f"{REPO_URL}?fingerprint={fingerprint}"
 add_app = add_https.replace("https://", "fdroidrepos://", 1)
 
@@ -54,13 +57,16 @@ for meta_file in sorted((ROOT / "metadata").glob("*.yml")):
         continue
     meta = yaml.safe_load(meta_file.read_text())
     latest = max(packages[pkg], key=lambda p: p.get("versionCode", 0))
+    source = str(meta.get("SourceCode", ""))
+    if not source.startswith("https://"):
+        raise SystemExit(f"{meta_file.name}: SourceCode must be an https:// link")
     icon = icon_path(pkg)
     icon_html = (
-        f'<img src="{icon}" alt="" width="56" height="56">' if icon
+        f'<img src="{html.escape(icon)}" alt="" width="56" height="56">' if icon
         else f'<div class="ph">{html.escape(meta["Name"][0])}</div>'
     )
     cards.append(f"""
-      <a class="card" href="{html.escape(meta['SourceCode'])}">
+      <a class="card" href="{html.escape(source)}">
         {icon_html}
         <div>
           <h3>{html.escape(meta['Name'])} <span>{html.escape(latest.get('versionName', ''))}</span></h3>

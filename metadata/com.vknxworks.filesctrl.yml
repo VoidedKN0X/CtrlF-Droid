@@ -20,3 +20,8 @@ Description: |
   * Zip and unzip, search, bookmarks and a built-in text editor
 
   No root needed.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 28d8d65b3cd6bedba3ebe7f85221c8ceab9b072402438635764d54cde9ea7007

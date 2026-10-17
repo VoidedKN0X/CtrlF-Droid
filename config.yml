@@ -9,5 +9,11 @@ repo_description: >-
 
 archive_older: 0
 
-# keystore, repo_keyalias, keystorepass, keypass and sdk_path are added by the
-# workflow at build time from the repo's Actions secrets and variables.
+# Signing. The keystore file is written by the workflow from the
+# REPO_KEYSTORE_BASE64 secret and deleted afterwards. The password and alias are
+# read from environment variables (set from Actions secrets/variables), so no
+# secret is ever written into this file. sdk_path defaults to $ANDROID_HOME.
+keystore: keystore.p12
+repo_keyalias: {env: REPO_KEY_ALIAS}
+keystorepass: {env: REPO_KEYSTORE_PASSWORD}
+keypass: {env: REPO_KEYSTORE_PASSWORD}

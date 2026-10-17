@@ -20,3 +20,8 @@ Description: |
   * Backup and restore all remotes
 
   Needs a phone with a built-in IR blaster.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 361c145dfb0f8325fb9f6155c70c6a84cb280392d69f5d45fa8a42c6c2feb054

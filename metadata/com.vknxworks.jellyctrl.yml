@@ -21,3 +21,8 @@ Description: |
   * Phone, tablet and foldable layouts
 
   Needs Jellyfin 10.9 or newer.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 70902f8507e5e4658126a733256838b9ee5950f98cf3fbcc5a59eb2db3929c17

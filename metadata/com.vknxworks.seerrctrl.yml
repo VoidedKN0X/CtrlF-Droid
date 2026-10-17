@@ -20,3 +20,8 @@ Description: |
   * Upcoming calendar, issues and full admin settings
 
   Unofficial app, not affiliated with the Seerr, Jellyseerr or Overseerr projects.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 9208dfbb6bcdbf5baa9cea6c5dc6d251c2804656350151ac19e8cd66d6983d83
