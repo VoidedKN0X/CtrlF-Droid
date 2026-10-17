@@ -22,12 +22,22 @@ fingerprint = sys.argv[1].replace(":", "").strip().upper()
 add_https = f"{REPO_URL}?fingerprint={fingerprint}"
 add_app = add_https.replace("https://", "fdroidrepos://", 1)
 
+if SITE.exists():
+    shutil.rmtree(SITE)
+SITE.mkdir()
+
 index = json.loads((REPO / "index-v1.json").read_text())
 packages = index.get("packages", {})
 icons = {a["packageName"]: a.get("icon") for a in index.get("apps", [])}
 
 
 def icon_path(pkg):
+    # Store icon from metadata/<pkg>/en-US/icon.png (rendered by render-icons.yml)
+    src = ROOT / "metadata" / pkg / "en-US" / "icon.png"
+    if src.exists():
+        (SITE / "app-icons").mkdir(parents=True, exist_ok=True)
+        shutil.copy(src, SITE / "app-icons" / f"{pkg}.png")
+        return f"app-icons/{pkg}.png"
     name = icons.get(pkg)
     if not name:
         return None
@@ -67,7 +77,7 @@ page = f"""<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CtrlF-Droid</title>
-<link rel="icon" href="repo/icons/icon.png">
+<link rel="icon" href="ctrlf-droid.png">
 <style>
   :root {{ --bg:#f6f4fb; --fg:#1b1530; --muted:#5d5675; --card:#fff; --line:#e4dff2; --accent:#6b45f2; --accent-fg:#fff; }}
   @media (prefers-color-scheme: dark) {{
@@ -103,7 +113,7 @@ page = f"""<!doctype html>
 <body>
 <main>
   <header>
-    <img src="repo/icons/icon.png" alt="">
+    <img src="ctrlf-droid.png" alt="CtrlF-Droid">
     <div>
       <h1>CtrlF-Droid</h1>
       <p class="lead">The VKNXWorks Ctrl series in one F-Droid repo. Free, open source, updated automatically.</p>
@@ -137,10 +147,8 @@ page = f"""<!doctype html>
 </html>
 """
 
-if SITE.exists():
-    shutil.rmtree(SITE)
-SITE.mkdir()
 shutil.copytree(REPO, SITE / "repo")
+shutil.copy(ROOT / "assets" / "icon.png", SITE / "ctrlf-droid.png")
 (SITE / "index.html").write_text(page)
 (SITE / "fingerprint.txt").write_text(fingerprint + "\n")
 (SITE / ".nojekyll").write_text("")
