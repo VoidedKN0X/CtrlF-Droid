@@ -1,0 +1,23 @@
+Categories:
+- System
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/CraftyCtrl
+SourceCode: https://github.com/VoidedKN0X/CraftyCtrl
+IssueTracker: https://github.com/VoidedKN0X/CraftyCtrl/issues
+Changelog: https://github.com/VoidedKN0X/CraftyCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: CraftyCtrl
+Summary: Manage Minecraft servers on Crafty Controller
+Description: |
+  Manage your Minecraft servers on a self-hosted Crafty Controller 4 panel.
+
+  * Server list with live CPU, memory, players and uptime
+  * Start, restart, stop and kill, with an optional in-game countdown
+  * Live console with search, filters and quick commands
+  * Server settings, whitelist, operators, bans, plugins and mods
+  * File browser with a text editor
+  * Backups and scheduled tasks
+  * Alerts when a server stops or crashes
+
+  Needs Crafty Controller 4.x reachable over HTTPS. Unofficial app, not affiliated with the Crafty Controller team.

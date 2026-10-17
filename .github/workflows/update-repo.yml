@@ -1,0 +1,100 @@
+name: Update F-Droid repo
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    # Every 3 hours, so new app releases show up without any manual step
+    - cron: "23 */3 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install F-Droid tools
+        run: pip install fdroidserver qrcode
+
+      - name: Download the latest APK of every app
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p repo/icons
+          cp assets/icon.png repo/icons/icon.png
+          grep -v '^#' apps.txt | sed '/^$/d' | while read -r app; do
+            echo "::group::$app"
+            if ! gh release download --repo "$app" --pattern '*.apk' --dir repo --clobber; then
+              echo "::warning::No APK found in the latest release of $app"
+            fi
+            echo "::endgroup::"
+          done
+          ls -la repo
+
+      - name: Set up the repo signing key
+        env:
+          REPO_KEYSTORE_BASE64: ${{ secrets.REPO_KEYSTORE_BASE64 }}
+          REPO_KEYSTORE_PASSWORD: ${{ secrets.REPO_KEYSTORE_PASSWORD }}
+          REPO_KEY_ALIAS: ${{ vars.REPO_KEY_ALIAS }}
+        run: |
+          if [ -z "$REPO_KEYSTORE_BASE64" ] || [ -z "$REPO_KEYSTORE_PASSWORD" ] || [ -z "$REPO_KEY_ALIAS" ]; then
+            echo "::error::Missing REPO_KEYSTORE_BASE64 / REPO_KEYSTORE_PASSWORD secrets or the REPO_KEY_ALIAS variable"
+            exit 1
+          fi
+          echo "$REPO_KEYSTORE_BASE64" | base64 -d > keystore.p12
+          python - <<'EOF'
+          import os, yaml
+          extra = {
+              "keystore": "keystore.p12",
+              "repo_keyalias": os.environ["REPO_KEY_ALIAS"],
+              "keystorepass": os.environ["REPO_KEYSTORE_PASSWORD"],
+              "keypass": os.environ["REPO_KEYSTORE_PASSWORD"],
+              "sdk_path": os.environ["ANDROID_HOME"],
+          }
+          with open("config.yml", "a") as f:
+              f.write("\n" + yaml.safe_dump(extra))
+          EOF
+          chmod 600 config.yml keystore.p12
+          FP=$(keytool -exportcert -alias "$REPO_KEY_ALIAS" -keystore keystore.p12 \
+                 -storetype PKCS12 -storepass "$REPO_KEYSTORE_PASSWORD" \
+               | sha256sum | cut -d' ' -f1 | tr 'a-f' 'A-F')
+          echo "FINGERPRINT=$FP" >> "$GITHUB_ENV"
+          echo "Repo fingerprint: $FP"
+
+      - name: Build and sign the repo index
+        run: fdroid update --use-date-from-apk --pretty
+
+      - name: Build the website
+        run: python scripts/build_site.py "$FINGERPRINT"
+
+      - name: Remove secrets before publishing
+        if: always()
+        run: rm -f keystore.p12 && git checkout -- config.yml
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

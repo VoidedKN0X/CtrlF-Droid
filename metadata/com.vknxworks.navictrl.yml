@@ -1,0 +1,20 @@
+Categories:
+- Multimedia
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/NaviCtrl
+SourceCode: https://github.com/VoidedKN0X/NaviCtrl
+IssueTracker: https://github.com/VoidedKN0X/NaviCtrl/issues
+Changelog: https://github.com/VoidedKN0X/NaviCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: NaviCtrl
+Summary: Music player for Navidrome servers
+Description: |
+  A full music player for self-hosted Navidrome servers.
+
+  * All your songs in one list, A to Z or by date added
+  * Endless Shuffle all
+  * Favourites for songs, albums and artists
+  * Background playback, synced lyrics and sleep timer
+  * Downloads for offline listening
+  * Scrobbling to Last.fm and ListenBrainz through Navidrome

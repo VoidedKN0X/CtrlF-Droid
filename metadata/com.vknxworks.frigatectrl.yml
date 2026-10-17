@@ -1,0 +1,23 @@
+Categories:
+- Security
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/FrigateCtrl
+SourceCode: https://github.com/VoidedKN0X/FrigateCtrl
+IssueTracker: https://github.com/VoidedKN0X/FrigateCtrl/issues
+Changelog: https://github.com/VoidedKN0X/FrigateCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: FrigateCtrl
+Summary: Watch and review your Frigate NVR cameras
+Description: |
+  Watch and review your self-hosted Frigate NVR cameras.
+
+  * Camera grid with live snapshots and alert badges
+  * Low-latency live view with sound, zoom and picture-in-picture
+  * Two-way talk and PTZ controls
+  * History with a precise, zoomable timeline
+  * Events list, clips to save or share
+  * System health: CPU, GPU, detectors and storage
+  * App lock with PIN and fingerprint
+
+  Needs Frigate 0.14 or newer. Unofficial app, not affiliated with the Frigate project.
