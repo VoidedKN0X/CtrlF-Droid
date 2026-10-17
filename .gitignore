@@ -5,3 +5,8 @@ tmp/
 _site/
 *.apk
 __pycache__/
+*.p12
+*.jks
+*.keystore
+# Generated from release notes on every run
+metadata/*/en-US/changelogs/

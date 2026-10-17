@@ -21,3 +21,8 @@ Description: |
   * Alerts when a server stops or crashes
 
   Needs Crafty Controller 4.x reachable over HTTPS. Unofficial app, not affiliated with the Crafty Controller team.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- ad45501c0cc0f7e9ca68f7a771994996407e50deb85a2ab859208fdad360cb57
