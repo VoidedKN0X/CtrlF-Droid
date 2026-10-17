@@ -1,0 +1,58 @@
+name: Render app icons
+
+# The apps use vector (adaptive) launcher icons, which F-Droid can't read from
+# the APK. This turns each app's icon into a 512px PNG store icon in
+# metadata/<package>/en-US/icon.png, commits it if it changed, and rebuilds the repo.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - apps.txt
+      - scripts/render_icons.py
+      - .github/workflows/render-icons.yml
+  workflow_dispatch:
+  schedule:
+    - cron: "41 4 * * 1"
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the SVG renderer
+        run: sudo apt-get update -q && sudo apt-get install -y -q librsvg2-bin
+
+      - name: Render icons
+        run: |
+          grep -v '^#' apps.txt | sed '/^$/d' | while read -r app; do
+            name=${app#*/}
+            git clone -q --depth 1 --filter=blob:none --no-checkout "https://github.com/$app" "src/$name"
+            git -C "src/$name" sparse-checkout set --no-cone /app/src/main/res/ /app/build.gradle.kts
+            git -C "src/$name" checkout -q
+            pkg=$(python scripts/render_icons.py "src/$name" "src/$name.svg")
+            mkdir -p "metadata/$pkg/en-US"
+            rsvg-convert -w 512 -h 512 "src/$name.svg" -o "metadata/$pkg/en-US/icon.png"
+            echo "$app -> metadata/$pkg/en-US/icon.png"
+          done
+          rm -rf src
+
+      - name: Commit changed icons and rebuild the repo
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add metadata
+          if git diff --cached --quiet; then
+            echo "Icons unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update app icons"
+          git push
+          gh workflow run update-repo.yml --ref main
