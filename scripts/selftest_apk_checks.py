@@ -3,7 +3,8 @@
     python scripts/selftest_apk_checks.py <a good, already checked APK> <scratch dir>
 
 Makes broken copies of a real release APK in <scratch dir> and exits non-zero
-unless apksigner and apk_signers.py both reject every one of them:
+unless each one is rejected by the check responsible for it (apksigner for the
+changed contents, apk_signers.py for the structural tricks):
   * one byte of the signed contents changed (signature no longer matches),
   * the signing block stripped, leaving no v2/v3 signature,
   * a second copy of the signing block's first entry appended (ambiguous APK),
@@ -73,13 +74,14 @@ def main():
             except ApkError:
                 rejected_by.append(label)
         path.unlink()
-        # The signature check must catch every forgery; the parser catches the
-        # structural ones (it doesn't look at the contents, so it can't see the
-        # changed byte).
-        ok = "apksigner" in rejected_by and (
-            name == "one byte of the contents changed" or "parser" in rejected_by
-        )
-        print(f"{'ok  ' if ok else 'FAIL'} {name}: rejected by {', '.join(rejected_by) or 'nothing'}")
+        # An APK is only published if both checks pass. apksigner must catch the
+        # changed contents (that proves signatures are really verified); the
+        # parser must catch the structural tricks (apksigner itself accepts some
+        # of them, e.g. it just uses the first of two duplicate blocks).
+        needed = "apksigner" if name == "one byte of the contents changed" else "parser"
+        ok = needed in rejected_by
+        line = f"{name}: rejected by {', '.join(rejected_by) or 'nothing'}"
+        print(f"ok   {line}" if ok else f"::error::self-test FAIL {line} (the {needed} check should reject it)")
         failed |= not ok
     if failed:
         sys.exit("::error::self-test: a forged APK got through the checks; not publishing")
