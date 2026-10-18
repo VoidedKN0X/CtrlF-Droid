@@ -162,7 +162,7 @@ _VERIFIED_RE = re.compile(r"^Verified using (v2|v3|v3\.1) scheme \([^)]*\): true
 # "Signer #1 certificate SHA-256 digest: ..." and, for v3.1 key rotation,
 # "Signer (minSdkVersion=33, maxSdkVersion=...) certificate SHA-256 digest: ...".
 # "Source Stamp Signer ..." lines don't start with "Signer" and aren't APK signers.
-_SIGNER_RE = re.compile(r"^Signer[^\n:]* certificate SHA-256 digest: ([0-9a-f]{64})$", re.M)
+_SIGNER_RE = re.compile(r"^Signer[^\n:]* certificate SHA-256 digest: ?([0-9A-Fa-f]{64})\s*$", re.M)
 
 
 def verified_signer_sha256s(path):
@@ -184,9 +184,11 @@ def verified_signer_sha256s(path):
         raise ApkError("apksigner rejected the signature: " + " | ".join(reason[:5]))
     if not _VERIFIED_RE.search(out):
         raise ApkError("apksigner didn't verify a v2 or v3 signature")
-    signers = sorted(set(_SIGNER_RE.findall(out)))
+    signers = sorted({d.lower() for d in _SIGNER_RE.findall(out)})
     if not signers:
-        raise ApkError("apksigner reported no signer certificates")
+        shown = [line.strip() for line in out.splitlines() if "SHA-256" in line or "Signer" in line]
+        shown = shown or [line.strip() for line in out.splitlines()[:12]]
+        raise ApkError("apksigner reported no signer certificates: " + " | ".join(shown[:8]))
     return signers
 
 
