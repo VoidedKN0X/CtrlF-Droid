@@ -4,12 +4,18 @@
 
 The APK is only added if all of these hold, otherwise this exits non-zero and
 the workflow stops before anything is signed or published:
+  * its signatures verify with `apksigner verify` (Google's verifier: checks
+    every v1/v2/v3/v3.1 signature and v3 key-rotation lineage), with a valid v2
+    or v3 signature, and every signer apksigner verified has its SHA-256 listed
+    in that listing's AllowedAPKSigningKeys,
+  * every certificate in the v2/v3/v3.1 signing blocks, read independently by
+    apk_signers.py (which also rejects malformed or duplicate blocks), is
+    listed there too,
   * its package name has a listing in metadata/<package>.yml,
   * that listing's SourceCode is the GitHub repo the APK was downloaded from
-    (so one app's release can't ship an APK for another app),
-  * it has a v2/v3 signature and every signing certificate's SHA-256 is listed
-    in that listing's AllowedAPKSigningKeys.
-`fdroid update` checks AllowedAPKSigningKeys again and verifies the signatures.
+    (so one app's release can't ship an APK for another app).
+`fdroid update` then verifies the signatures with the same apksigner and checks
+AllowedAPKSigningKeys again before signing the index.
 The APK is saved as <package>_<versionCode>.apk, never under the asset's name.
 """
 import re
@@ -24,7 +30,7 @@ try:  # androguard 4.x
 except ImportError:  # androguard 3.x
     from androguard.core.bytecodes.apk import APK
 
-from apk_signers import ApkError, signer_sha256s
+from apk_signers import ApkError, signer_sha256s, verified_signer_sha256s
 from whats_new import PACKAGE_RE, write as write_whats_new
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -46,6 +52,10 @@ def main() -> None:
         signers = signer_sha256s(apk_path)
     except (ApkError, OSError) as e:
         fail(f"{gh_repo}: {Path(apk_path).name} has no usable v2/v3 signature ({e})")
+    try:
+        verified = verified_signer_sha256s(apk_path)
+    except ApkError as e:
+        fail(f"{gh_repo}: {Path(apk_path).name} failed signature verification ({e})")
 
     apk = APK(apk_path)
     package = apk.get_package() or ""
@@ -67,7 +77,7 @@ def main() -> None:
     allowed = {str(k).lower() for k in meta.get("AllowedAPKSigningKeys") or []}
     if not allowed or not all(SHA256_RE.match(k) for k in allowed):
         fail(f"{package}: AllowedAPKSigningKeys is missing or malformed in {meta_file.name}")
-    unknown = [s for s in signers if s not in allowed]
+    unknown = sorted({s for s in signers + verified if s not in allowed})
     if unknown:
         fail(
             f"{gh_repo}: {Path(apk_path).name} is signed by an unexpected certificate "

@@ -1,0 +1,25 @@
+# Changelog
+
+Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
+
+## 2026-10-18
+
+### Security
+
+- **Every APK's signature is now cryptographically verified before it can enter the repo.** Until now the repo's own check only read which certificate an APK claimed to be signed with and left the actual signature check to `fdroid update`. If the Android SDK's `apksigner` was ever missing on the build machine, `fdroid update` would quietly fall back to `jarsigner`, which only checks old-style v1 signatures, so an APK carrying a copy of an app's certificate next to a forged signature could have slipped through. Now each APK goes through Google's `apksigner verify` (every v1/v2/v3/v3.1 signature and v3 key-rotation history), it must have a valid v2 or v3 signature, and every signer `apksigner` verified must be the app's pinned release key. Any failure stops the run before the repo is signed, and the current repo stays live.
+- **The run stops if `apksigner` can't be found**, instead of letting `fdroid update` fall back to `jarsigner`. It uses `apksigner` from build-tools 34 or newer (33.x is skipped because it passes some invalid v3 signatures), and `fdroid update` uses the same one.
+- **Ambiguous or malformed APKs are refused.** The independent certificate reader now rejects APKs whose signing block contains the same signature block twice (different tools would read different copies), finds the ZIP end record the same way Android does so a fake one hidden in the ZIP comment can't redirect it, refuses ZIP64 and multi-disk archives, and checks that the central directory ends exactly where the ZIP end record starts.
+- **Both checks must agree.** An APK is only added if every certificate found by the independent reader *and* every signer verified by `apksigner` is in the app's `AllowedAPKSigningKeys`.
+- **Built-in self-test on every run.** Before the signing key is touched, the workflow feeds forged copies of a real release APK (one changed byte, signing block removed, duplicated signing block entry, fake ZIP end record) through the same checks, and stops unless every forgery is rejected.
+- **An empty repo is never published.** If no APK could be downloaded (for example during a GitHub outage), the run now fails and the current repo stays live, instead of publishing an index with no apps in it.
+
+## 2026-10-17
+
+### Security
+
+- Each app's release signing certificate is pinned in its listing (`AllowedAPKSigningKeys`). Every downloaded APK must have a v2/v3 signature from that certificate, and its package must have a listing whose source code link is the GitHub repo it was downloaded from, so one app's release can't publish an APK for another app. Any failed check stops the run before anything is signed or published.
+- APKs are saved as `<package>_<versionCode>.apk` instead of the name of the release file.
+- Release notes shown as "What's new" are cleaned: HTML, links, control characters and invisible text-direction characters are removed and the length is capped.
+- The repo signing key's password and alias are read from GitHub secrets/variables through the environment and are never written to disk or put on a command line. The keystore file is written with private permissions and always deleted at the end of the run.
+- Workflows pin every GitHub Action to an exact commit, get no permissions by default (only the deploy job can publish to GitHub Pages), don't keep the GitHub token in the checkout, pin the F-Droid tools (fdroidserver 2.4.5) and validate every line of `apps.txt`.
+- App icons are rendered with escaped attributes and plain hex colours only, and the landing page only links to `https://` source code pages.

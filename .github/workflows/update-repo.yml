@@ -34,6 +34,29 @@ jobs:
         # Pinned: this job holds the repo signing key.
         run: pip install fdroidserver==2.4.5 qrcode==8.2
 
+      - name: Find apksigner
+        # add_apk.py and `fdroid update` both verify APK signatures with this
+        # apksigner. Without it fdroid would silently fall back to jarsigner, which
+        # only checks old v1 signatures, so a missing apksigner stops the run.
+        run: |
+          set -euo pipefail
+          sdk="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+          bt=""
+          for d in $(ls -1d "$sdk"/build-tools/*/ 2>/dev/null | sort -V -r); do
+            v=$(basename "$d")
+            case "$v" in 33.*) continue ;; esac  # 33.x passes some invalid v3 signatures
+            if [[ "${v%%.*}" =~ ^[0-9]+$ ]] && [ "${v%%.*}" -ge 34 ] && [ -x "$d/apksigner" ]; then
+              bt="${d%/}"
+              break
+            fi
+          done
+          if [ -z "$bt" ]; then
+            echo "::error::No apksigner from build-tools 34 or newer found in the Android SDK"
+            exit 1
+          fi
+          echo "$bt" >> "$GITHUB_PATH"
+          echo "Using apksigner $("$bt/apksigner" --version) from $bt"
+
       - name: Download and check the latest APK and release notes of every app
         env:
           GH_TOKEN: ${{ github.token }}
@@ -70,6 +93,18 @@ jobs:
             exit 1
           fi
           ls -la repo
+
+      - name: Self-test the APK checks
+        # Feeds forged copies of a real APK to the same checks and stops here,
+        # before the signing key is touched, unless every one is rejected.
+        run: |
+          set -euo pipefail
+          first=$(find repo -maxdepth 1 -name '*.apk' | sort | sed -n 1p)
+          if [ -z "$first" ]; then
+            echo "::error::No APKs were added; refusing to publish an empty repo"
+            exit 1
+          fi
+          python scripts/selftest_apk_checks.py "$first" "$RUNNER_TEMP/selftest"
 
       - name: Set up the repo signing key
         env:
