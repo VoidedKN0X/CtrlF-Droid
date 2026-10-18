@@ -159,10 +159,14 @@ def find_apksigner():
 
 
 _VERIFIED_RE = re.compile(r"^Verified using (v2|v3|v3\.1) scheme \([^)]*\): true$", re.M)
-# "Signer #1 certificate SHA-256 digest: ..." and, for v3.1 key rotation,
-# "Signer (minSdkVersion=33, maxSdkVersion=...) certificate SHA-256 digest: ...".
-# "Source Stamp Signer ..." lines don't start with "Signer" and aren't APK signers.
-_SIGNER_RE = re.compile(r"^Signer[^\n:]* certificate SHA-256 digest: ?([0-9A-Fa-f]{64})\s*$", re.M)
+# Older apksigner: "Signer #1 certificate SHA-256 digest: ..." and, for v3.1 key
+# rotation, "Signer (minSdkVersion=33, ...) certificate SHA-256 digest: ...".
+# apksigner 35+: one line per scheme, "V2 Signer: certificate SHA-256 digest: ...",
+# "V3 Signer: ...", "V31 Signer (minSdkVersion=...): ...". Every one must be allowed.
+# "Source Stamp Signer ..." lines aren't APK signers and don't match.
+_SIGNER_RE = re.compile(
+    r"^(?:V[0-9.]+ )?Signer\b[^\n]*?certificate SHA-256 digest: ?([0-9A-Fa-f]{64})\s*$", re.M
+)
 
 
 def verified_signer_sha256s(path):
