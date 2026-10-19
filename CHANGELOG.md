@@ -6,6 +6,13 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ### Changed
 
+- **ImmichCtrl no longer has a "Non-free dependency" mark.** ImmichCtrl 0.3.0 removed Google Cast, so the app no longer contains any Google Play services code. Its listing no longer mentions casting, and says you choose its home or public address yourself.
+- **NaviCtrl's listing mentions its new Playlists tab** (NaviCtrl 0.2.0). Internet radio was removed from the app and was never in the listing.
+- **PrintCtrl's listing says you pick which of a server's two addresses is used** (PrintCtrl 0.5.0 no longer switches by itself).
+- **Every listing says the app is Google-free**: no Google Play services and no Google libraries that contact Google. The apps no longer ask Google Play services for an emoji font either.
+
+### Changed
+
 - **Store listings match the apps as they are today.** Every app's summary and feature list was rewritten from its up-to-date README, so the repo only lists features that are in the current version. Features still being built (for example ProxCtrl's Storage, Tasks and Node tabs, or TrueCtrl's datasets and sharing) are no longer listed, and newer ones are (PaperCtrl's scanner and documents, ProxCtrl's snapshots and backups, TrueCtrl's pools, scrubs and disks, and more).
 - **BeamCtrl's summary says it "works offline"** instead of "fully offline", since its optional usage stats can go online if you opt in.
 - **ImmichCtrl is marked "Non-free dependency".** Casting to a TV uses Google Play services (Google Cast). It only starts when you tap the Cast button, but F-Droid clients now show this before you install.
