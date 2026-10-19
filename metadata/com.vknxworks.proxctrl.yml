@@ -14,12 +14,17 @@ Description: |
 
   * Overview with live node graphs and a needs-attention list
   * All containers and VMs with usage, tags, search, sorting and bulk power actions
-  * Guest pages with graphs, power controls, IP addresses and notes
+  * Guest pages with graphs, power controls, IP addresses, notes, resources, options and firewall
+  * Edit cores, memory and tags, grow disks, clone guests and make templates
   * Consoles for containers and VMs, and a node shell
-  * Snapshots, backups and restore, confirmed by typing the guest ID
+  * Snapshots, backups and restore
+  * Storage: content, ISO upload, container templates, disks with SMART health, ZFS, LVM and backup jobs
+  * Tasks with live logs, history filters and Stop
+  * Node: services, updates with changelogs, network and SDN, reboot and shutdown, Wake-on-LAN
+  * Home screen widgets and a Quick Settings tile
   * Notifications without Google: background checks or UnifiedPush via ntfy
   * Several servers, API token or password with two-factor
-  * Read-only mode, certificate pinning and screenshot protection
+  * Read-only mode, typed confirmations for dangerous actions, optional fingerprint or screen-lock app lock, certificate pinning and screenshot protection
 
   Unofficial app, not affiliated with Proxmox Server Solutions.
 
