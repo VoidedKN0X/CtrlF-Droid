@@ -1,0 +1,30 @@
+Categories:
+- Reading
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/PaperCtrl
+SourceCode: https://github.com/VoidedKN0X/PaperCtrl
+IssueTracker: https://github.com/VoidedKN0X/PaperCtrl/issues
+Changelog: https://github.com/VoidedKN0X/PaperCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: PaperCtrl
+Summary: Scan and browse documents on Paperless-ngx
+Description: |
+  Scan paper into your self-hosted Paperless-ngx server and browse your documents.
+
+  * Scanner with edge detection, auto-capture, multi-page documents, cropping and filters, built entirely on open-source libraries
+  * Upload queue that works offline and uploads when your server is reachable
+  * Share to PaperCtrl from any app, for PDFs, images and other files Paperless accepts
+  * Inbox to sort new documents with swipes and Paperless' own suggestions
+  * Documents with full-text search, filters, saved views and bulk editing
+  * Document viewer for the original and the searchable (OCR'd) version, with notes, history and share links
+  * Organise tags, correspondents, document types, storage paths and custom fields
+  * Widget, Quick Settings tile and shortcuts to start a scan in one tap
+  * Several servers, self-signed certificates you confirm by fingerprint, and an optional app lock
+
+  Needs a 64-bit ARM phone. Unofficial app, not affiliated with Paperless-ngx.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 00d1b23ecc53ba5198b326714d1d70e83e3abd75e2e720e690b0f06f2484cb6e

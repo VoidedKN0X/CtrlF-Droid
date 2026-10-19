@@ -1,0 +1,29 @@
+Categories:
+- System
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/TrueCtrl
+SourceCode: https://github.com/VoidedKN0X/TrueCtrl
+IssueTracker: https://github.com/VoidedKN0X/TrueCtrl/issues
+Changelog: https://github.com/VoidedKN0X/TrueCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: TrueCtrl
+Summary: Monitor and manage your TrueNAS server
+Description: |
+  Monitor and manage your TrueNAS server (25.04 or newer) from your phone: a fast, touch-first alternative to the web UI.
+
+  * Overview of your server, with an attention list for alerts, unhealthy or full pools, failing disks, overdue scrubs, failed backups and more
+  * Storage: pools with their layout and scrubs, datasets and zvols (including locking and unlocking encrypted ones), and disks with SMART health
+  * Protection: snapshots, periodic snapshot tasks, replication, cloud sync, rsync and scrub schedules, with the age of the last good backup
+  * Sharing: SMB and NFS shares and the services behind them
+  * System: apps, alerts, jobs with live progress, updates, network and power
+  * Notifications without Google services: polling, or UnifiedPush through your own ntfy
+  * Widgets and a Quick Settings tile
+  * Safe by design: read-only mode, typed confirmations for dangerous actions, certificate pinning, optional fingerprint lock
+
+  Needs HTTPS on your TrueNAS (a self-signed certificate is fine). Unofficial app, not affiliated with iXsystems.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- c5f8e33094a8c5c0ca6113fb657ef26add095c56ed24bf4836f798b08f8abf90
