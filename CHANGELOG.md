@@ -6,6 +6,11 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ### Changed
 
+- **Store listings match the apps as they are today.** Every app's summary and feature list was rewritten from its up-to-date README, so the repo only lists features that are in the current version. Features still being built (for example ProxCtrl's Storage, Tasks and Node tabs, or TrueCtrl's datasets and sharing) are no longer listed, and newer ones are (PaperCtrl's scanner and documents, ProxCtrl's snapshots and backups, TrueCtrl's pools, scrubs and disks, and more).
+- **ImmichCtrl is marked "Non-free dependency".** Casting to a TV uses Google Play services (Google Cast). It only starts when you tap the Cast button, but F-Droid clients now show this before you install.
+
+### Changed
+
 - **Every app's description now says it has optional usage stats.** All 14 Ctrl apps can send anonymous usage stats, but only if you opt in. Each store listing now says so up front, so you know before installing (this matters most for BeamCtrl, which otherwise never uses the internet).
 - **Descriptions only promise security features the apps have.** PaperCtrl's listing no longer mentions an app lock, and ProxCtrl's and TrueCtrl's no longer mention typed confirmations or a fingerprint lock, because those aren't in the apps yet. ProxCtrl and TrueCtrl now describe their read-only mode, which blocks every change, and their screenshot protection.
 

@@ -12,14 +12,17 @@ Summary: Bambu Lab printers through Bambuddy, and Spoolman spools
 Description: |
   Your Bambu Lab printers and filament spools, from your self-hosted Bambuddy and Spoolman servers.
 
-  * Live printer status, progress and time left, with Bambuddy's shared camera stream
-  * Pause, resume, stop, speed, light, fans, heater targets, filament load and unload
-  * AMS and AMS lite slots, printer messages (HMS) and AI failure detection
-  * Print queue, file library with plate and AMS slot choice, and slicing on the server
-  * Print history with timelapses and statistics
-  * Spoolman inventory with weigh-in, QR label and NFC tag scanning
-  * Progress notification and alerts without Google services (background checks or ntfy/UnifiedPush)
+  * Live printer status, progress and time left, with temperature graphs
+  * Live camera with full screen, zoom and saving pictures
+  * Print controls: pause, resume, stop, speed, light, fans, temperatures, jog, filament, skip parts
+  * AMS slots with filament and linked Spoolman spool
+  * Queue, file library, server slicing and share-to-print
+  * Print archive with timelapses, statistics and costs per month
+  * Spoolman inventory with weigh-ins, QR and NFC scanning and low-stock alerts
+  * Progress notification (Live Update on Android 16), first-layer check and alerts via polling or ntfy
   * Home-screen widget and Quick Settings tile
+  * Two addresses per server and self-signed certificates trusted by fingerprint
+  * Private on the lock screen; works with Bambuddy, Spoolman or both
 
   Works with Bambuddy, Spoolman, or both. Unofficial app, not affiliated with Bambu Lab, Bambuddy or Spoolman.
 
