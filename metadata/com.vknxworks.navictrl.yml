@@ -20,8 +20,11 @@ Description: |
   * Reorderable up-next queue that survives a restart
   * Downloads for offline listening and a cache of played songs
   * Scrobbling to Last.fm and ListenBrainz through Navidrome
-  * Album and artist pages, search and add to playlist
+  * Playlists tab: play, shuffle, create, rename, delete and edit your Navidrome playlists
+  * Album and artist pages and search
   * Several servers and accounts; separate Wi-Fi and mobile data quality
+
+  Google-free: no Google Play services or Google libraries that contact Google.
 
   Optional anonymous usage stats, off unless you say yes: if you opt in, the app sends which screens and features you use (never names, addresses, accounts or content) to VKNXWorks' own self-hosted server. See the app's README for the full list.
 

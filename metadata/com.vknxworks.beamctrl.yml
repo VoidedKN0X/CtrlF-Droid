@@ -24,6 +24,8 @@ Description: |
 
   Needs a phone with a built-in IR blaster.
 
+  Google-free: no Google Play services or Google libraries that contact Google.
+
   Optional anonymous usage stats, off unless you say yes: if you opt in, the app sends which screens and features you use (never names, addresses, accounts or content) to VKNXWorks' own self-hosted server. See the app's README for the full list.
 
 # SHA-256 of the release signing certificate. APKs signed by any other key are
