@@ -2,6 +2,13 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-10-19
+
+### New
+
+- **PrintCtrl** joins the repo: Bambu Lab printers through Bambuddy, and Spoolman spools. Its release signing certificate is pinned in its listing like every other app's, so only APKs signed with PrintCtrl's own release key are accepted.
+- The repo description now mentions Bambuddy and Spoolman.
+
 ## 2026-10-18
 
 ### Security

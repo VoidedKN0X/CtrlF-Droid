@@ -7,4 +7,5 @@ VoidedKN0X/FrigateCtrl
 VoidedKN0X/ImmichCtrl
 VoidedKN0X/JellyCtrl
 VoidedKN0X/NaviCtrl
+VoidedKN0X/PrintCtrl
 VoidedKN0X/SeerrCtrl

@@ -4,7 +4,8 @@ repo_name: CtrlF-Droid
 repo_icon: icon.png
 repo_description: >-
   The VKNXWorks Ctrl series: free and open-source Android apps for self-hosted
-  services like Jellyfin, Immich, Navidrome, Frigate, Seerr and Matrix.
+  services like Jellyfin, Immich, Navidrome, Frigate, Seerr, Matrix, Bambuddy and
+  Spoolman.
   Updated automatically from each app's GitHub releases.
 
 archive_older: 0

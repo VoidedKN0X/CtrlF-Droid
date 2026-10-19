@@ -1,0 +1,29 @@
+Categories:
+- Connectivity
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/PrintCtrl
+SourceCode: https://github.com/VoidedKN0X/PrintCtrl
+IssueTracker: https://github.com/VoidedKN0X/PrintCtrl/issues
+Changelog: https://github.com/VoidedKN0X/PrintCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: PrintCtrl
+Summary: Bambu Lab printers through Bambuddy, and Spoolman spools
+Description: |
+  Your Bambu Lab printers and filament spools, from your self-hosted Bambuddy and Spoolman servers.
+
+  * Live printer status, progress and time left, with Bambuddy's shared camera stream
+  * Pause, resume, stop, speed, light, fans, heater targets, filament load and unload
+  * AMS and AMS lite slots, printer messages (HMS) and AI failure detection
+  * Print queue, file library with plate and AMS slot choice, and slicing on the server
+  * Print history with timelapses and statistics
+  * Spoolman inventory with weigh-in, QR label and NFC tag scanning
+  * Progress notification and alerts without Google services (background checks or ntfy/UnifiedPush)
+  * Home-screen widget and Quick Settings tile
+
+  Works with Bambuddy, Spoolman, or both. Unofficial app, not affiliated with Bambu Lab, Bambuddy or Spoolman.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 7b6aadc911da9f1e9e126d75b7ad163bd4739e9f3e56e5286d2915139be1061a
