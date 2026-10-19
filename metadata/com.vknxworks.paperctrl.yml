@@ -20,9 +20,11 @@ Description: |
   * Document viewer for the original and the searchable (OCR'd) version, with notes, history and share links
   * Organise tags, correspondents, document types, storage paths and custom fields
   * Widget, Quick Settings tile and shortcuts to start a scan in one tap
-  * Several servers, self-signed certificates you confirm by fingerprint, and an optional app lock
+  * Several servers, and self-signed certificates you confirm by fingerprint
 
   Needs a 64-bit ARM phone. Unofficial app, not affiliated with Paperless-ngx.
+
+  Optional anonymous usage stats, off unless you say yes: if you opt in, the app sends which screens and features you use (never names, addresses, accounts or content) to VKNXWorks' own self-hosted server. See the app's README for the full list.
 
 # SHA-256 of the release signing certificate. APKs signed by any other key are
 # rejected and nothing is published (scripts/add_apk.py and fdroid update).

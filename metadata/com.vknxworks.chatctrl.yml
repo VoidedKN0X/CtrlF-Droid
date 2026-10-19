@@ -22,6 +22,8 @@ Description: |
 
   Needs a server with Simplified Sliding Sync (Synapse 1.114 or newer). 64-bit ARM only.
 
+  Optional anonymous usage stats, off unless you say yes: if you opt in, the app sends which screens and features you use (never names, addresses, accounts or content) to VKNXWorks' own self-hosted server. See the app's README for the full list.
+
 # SHA-256 of the release signing certificate. APKs signed by any other key are
 # rejected and nothing is published (scripts/add_apk.py and fdroid update).
 AllowedAPKSigningKeys:
