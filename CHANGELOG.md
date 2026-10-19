@@ -4,6 +4,11 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ## 2026-10-19
 
+### Changed
+
+- **Every app's description now says it has optional usage stats.** All 14 Ctrl apps can send anonymous usage stats, but only if you opt in. Each store listing now says so up front, so you know before installing (this matters most for BeamCtrl, which otherwise never uses the internet).
+- **Descriptions only promise security features the apps have.** PaperCtrl's listing no longer mentions an app lock, and ProxCtrl's and TrueCtrl's no longer mention typed confirmations or a fingerprint lock, because those aren't in the apps yet. ProxCtrl and TrueCtrl now describe their read-only mode, which blocks every change, and their screenshot protection.
+
 ### New
 
 - **ArrCtrl, PaperCtrl, ProxCtrl and TrueCtrl join the repo**, so all 14 Ctrl apps are now in one place:
