@@ -1,0 +1,30 @@
+Categories:
+- System
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/ProxCtrl
+SourceCode: https://github.com/VoidedKN0X/ProxCtrl
+IssueTracker: https://github.com/VoidedKN0X/ProxCtrl/issues
+Changelog: https://github.com/VoidedKN0X/ProxCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: ProxCtrl
+Summary: Manage your Proxmox VE server
+Description: |
+  Manage your Proxmox VE 8 or 9 server from your phone: a fast, touch-first alternative to the web UI.
+
+  * Overview of your node, with an attention list for full disks, high memory, failed backups and more
+  * Guests: all your containers and VMs with CPU, memory and disk use, tags, search, sorting and bulk start/stop
+  * Guest pages with graphs, power controls, console, snapshots, backups and restore
+  * Storage: storages, backups, ISOs and templates, disks with SMART health, ZFS and LVM
+  * Tasks with live logs
+  * Node: services, updates, network and a shell
+  * Notifications without Google services: polling, or UnifiedPush through your own ntfy
+  * Widgets and a Quick Settings tile
+  * Safe by design: read-only mode, typed confirmations for dangerous actions, certificate pinning, optional fingerprint lock
+
+  Unofficial app, not affiliated with Proxmox Server Solutions.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 14228ba9360fa293ac20cf9d327650e32c518634f80567682391c5ec259e6dfe

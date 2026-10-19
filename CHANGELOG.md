@@ -6,6 +6,16 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ### New
 
+- **ArrCtrl, PaperCtrl, ProxCtrl and TrueCtrl join the repo**, so all 14 Ctrl apps are now in one place:
+  - **ArrCtrl**: Radarr, Sonarr, Prowlarr, Bazarr, qBittorrent, autobrr and Cleanuparr in one app
+  - **PaperCtrl**: scan paper into Paperless-ngx and browse your documents
+  - **ProxCtrl**: manage your Proxmox VE server
+  - **TrueCtrl**: monitor and manage your TrueNAS server
+- Each new app's release signing certificate is pinned in its listing like every other app's, so only APKs signed with that app's own release key are accepted. All four certificates were checked: they're VKNXWorks release keys, not debug keys.
+- The repo description now mentions Paperless-ngx, Proxmox VE, TrueNAS and the *arr apps, and the README's app table lists all 14 apps.
+
+### New
+
 - **PrintCtrl** joins the repo: Bambu Lab printers through Bambuddy, and Spoolman spools. Its release signing certificate is pinned in its listing like every other app's, so only APKs signed with PrintCtrl's own release key are accepted.
 - The repo description now mentions Bambuddy and Spoolman.
 

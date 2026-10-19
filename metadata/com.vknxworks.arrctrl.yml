@@ -1,0 +1,33 @@
+Categories:
+- Multimedia
+- Internet
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/ArrCtrl
+SourceCode: https://github.com/VoidedKN0X/ArrCtrl
+IssueTracker: https://github.com/VoidedKN0X/ArrCtrl/issues
+Changelog: https://github.com/VoidedKN0X/ArrCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: ArrCtrl
+Summary: Radarr, Sonarr, Prowlarr, Bazarr, qBittorrent, autobrr and Cleanuparr in one app
+Description: |
+  One app for your whole self-hosted download stack: Radarr, Sonarr, Prowlarr, Bazarr, qBittorrent, autobrr and Cleanuparr.
+
+  * Movies and Series: your Radarr and Sonarr libraries with automatic and interactive search, monitoring, quality profiles, renaming and bulk edits
+  * Calendar with upcoming movies and episodes from both
+  * Activity: the Radarr and Sonarr queues with manual import, and your qBittorrent torrents with full controls
+  * Add torrents from magnet links and .torrent files, straight from the share sheet
+  * Subtitles through Bazarr on every movie and episode
+  * Prowlarr indexers and cross-indexer search, autobrr filters and releases, Cleanuparr stats and jobs
+  * System health for every server in one place, with low disk space warnings
+  * Notifications without Google services: polling, or instant push through your own ntfy server
+  * Widgets for upcoming releases and active downloads, and a Quick Settings tile for qBittorrent's alternative speed limits
+  * Every service is optional, and you can add more than one of each
+  * Self-signed certificates trusted per server, by fingerprint
+
+  Unofficial app, not affiliated with any of these projects.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- efdf6aa11880d285682d559c484ee702282426a582a810affcc7e81d53b716ce
