@@ -2,6 +2,12 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-10-20
+
+### Changed
+
+- **Link preview image** for the repo in `assets/social-preview.png`, with the CtrlF-Droid icon and "Every Ctrl app in one F-Droid repo, with automatic updates", for when the repo is shared on Reddit, Discord or elsewhere.
+
 ## 2026-10-19
 
 ### Changed
