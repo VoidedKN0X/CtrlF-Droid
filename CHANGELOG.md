@@ -6,6 +6,7 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ### Changed
 
+- **ProxCtrl's listing covers the finished app** (ProxCtrl 1.0.0): the Storage, Tasks and Node tabs, editing guest resources, growing disks, clones and templates, home screen widgets and the Quick Settings tile, and the app lock and typed confirmations, which are in the app now.
 - **ImmichCtrl no longer has a "Non-free dependency" mark.** ImmichCtrl 0.3.0 removed Google Cast, so the app no longer contains any Google Play services code. Its listing no longer mentions casting, and says you choose its home or public address yourself.
 - **NaviCtrl's listing mentions its new Playlists tab** (NaviCtrl 0.2.0). Internet radio was removed from the app and was never in the listing.
 - **PrintCtrl's listing says you pick which of a server's two addresses is used** (PrintCtrl 0.5.0 no longer switches by itself).
