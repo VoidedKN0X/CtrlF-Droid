@@ -8,17 +8,20 @@ IssueTracker: https://github.com/VoidedKN0X/CraftyCtrl/issues
 Changelog: https://github.com/VoidedKN0X/CraftyCtrl/releases
 Donate: https://github.com/sponsors/VoidedKN0X
 Name: CraftyCtrl
-Summary: Manage Minecraft servers on Crafty Controller
+Summary: Manage your Crafty Controller Minecraft servers from your phone
 Description: |
   Manage your Minecraft servers on a self-hosted Crafty Controller 4 panel.
 
-  * Server list with live CPU, memory, players and uptime
-  * Start, restart, stop and kill, with an optional in-game countdown
-  * Live console with search, filters and quick commands
-  * Server settings, whitelist, operators, bans, plugins and mods
-  * File browser with a text editor
+  * Server list with live status, CPU, memory, players and uptime
+  * Start, restart, stop and kill with a fingerprint check and optional in-game countdown
+  * Live console with search, filters, quick commands and name completion
+  * CPU, memory and player history charts
+  * server.properties, whitelist, operators, bans and player actions
+  * Turn plugins and mods on or off, add or remove jars
+  * File browser with text editor, upload and unzip
   * Backups and scheduled tasks
-  * Alerts when a server stops or crashes
+  * Create, clone, update and delete Java and Bedrock servers
+  * Crash and stop alerts, app lock with PIN and fingerprint
 
   Needs Crafty Controller 4.x reachable over HTTPS. Unofficial app, not affiliated with the Crafty Controller team.
 

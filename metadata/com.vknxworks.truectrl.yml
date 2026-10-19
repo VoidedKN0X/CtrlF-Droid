@@ -8,18 +8,17 @@ IssueTracker: https://github.com/VoidedKN0X/TrueCtrl/issues
 Changelog: https://github.com/VoidedKN0X/TrueCtrl/releases
 Donate: https://github.com/sponsors/VoidedKN0X
 Name: TrueCtrl
-Summary: Monitor and manage your TrueNAS server
+Summary: Monitor your TrueNAS pools, disks, scrubs and alerts from your phone
 Description: |
   Monitor and manage your TrueNAS server (25.04 or newer) from your phone: a fast, touch-first alternative to the web UI.
 
-  * Overview of your server, with an attention list for alerts, unhealthy or full pools, failing disks, overdue scrubs, failed backups and more
-  * Storage: pools with their layout and scrubs, datasets and zvols (including locking and unlocking encrypted ones), and disks with SMART health
-  * Protection: snapshots, periodic snapshot tasks, replication, cloud sync, rsync and scrub schedules, with the age of the last good backup
-  * Sharing: SMB and NFS shares and the services behind them
-  * System: apps, alerts, jobs with live progress, updates, network and power
-  * Notifications without Google services: polling, or UnifiedPush through your own ntfy
-  * Widgets and a Quick Settings tile
-  * Safe by design: read-only mode that blocks every change, certificate pinning, and screenshots blocked wherever you type keys, passwords or codes
+  * Overview with a needs-attention list, system card and live graphs
+  * Live alerts with dismiss and restore
+  * Pools with health, space and layout
+  * Start, pause, resume and stop scrubs with live progress
+  * Disks with temperatures, graphs and SMART health
+  * Several servers, API key or password with two-factor
+  * Read-only mode, certificate pinning and screenshot blocking
 
   Needs HTTPS on your TrueNAS (a self-signed certificate is fine). Unofficial app, not affiliated with iXsystems.
 

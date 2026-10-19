@@ -8,16 +8,19 @@ IssueTracker: https://github.com/VoidedKN0X/ElementCtrl/issues
 Changelog: https://github.com/VoidedKN0X/ElementCtrl/releases
 Donate: https://github.com/sponsors/VoidedKN0X
 Name: ElementCtrl
-Summary: Matrix chat for matrix.org and self-hosted Synapse
+Summary: Matrix chat for matrix.org and self-hosted servers, with E2EE
 Description: |
   A Matrix chat client in the spirit of Element X, built on the Matrix Rust SDK.
 
-  * matrix.org, other public servers or your own server
+  * Works with matrix.org, public servers or your own homeserver
   * Sign in with OAuth, password or single sign-on
-  * End-to-end encryption with verification and key backup
-  * Replies, threads, reactions, polls, voice messages, images and files
+  * End-to-end encryption with device verification and key backup
+  * Replies, threads, reactions, edits, polls, voice messages and files
   * Search inside chats, including encrypted ones
-  * Push notifications through ntfy (UnifiedPush), no Google services needed
+  * Push notifications through ntfy (UnifiedPush), no Google services
+  * Link previews, drafts and six chat bubble styles
+  * Create rooms, direct chats, explore public rooms, moderation
+  * Device list and app lock with PIN and fingerprint
   * Two-pane layout on tablets and foldables
 
   Needs a server with Simplified Sliding Sync (Synapse 1.114 or newer). 64-bit ARM only.

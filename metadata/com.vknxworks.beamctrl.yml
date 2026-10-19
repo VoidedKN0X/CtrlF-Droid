@@ -8,16 +8,19 @@ IssueTracker: https://github.com/VoidedKN0X/BeamCtrl/issues
 Changelog: https://github.com/VoidedKN0X/BeamCtrl/releases
 Donate: https://github.com/sponsors/VoidedKN0X
 Name: BeamCtrl
-Summary: TV remote for phones with an IR blaster
+Summary: Turn your phone's IR blaster into a TV remote, fully offline
 Description: |
   Turn your phone's infrared (IR) blaster into a TV remote.
 
-  * Ready-made remotes for Samsung, LG, Sony, Philips and Vizio TVs
-  * Find my TV: tries each brand's power code until your TV responds
-  * Import Flipper Zero .ir files, or build a remote button by button
-  * Full TV layout with d-pad, volume, channels, playback keys and a number pad
-  * Supports NEC, Samsung, Sony SIRC, Philips RC5/RC6, Pronto hex and raw codes
-  * Backup and restore all remotes
+  * Code library with 8,500+ remotes, built in and offline
+  * Try every button before you save a remote
+  * Turn off any TV by cycling every TV power code
+  * Ready-made Samsung, LG, Sony, Philips and Vizio remotes, plus Find my TV
+  * Import and export Flipper Zero .ir files, or build a remote button by button
+  * Full TV layout with hold-to-repeat volume, channel and arrow keys
+  * NEC, Samsung, Sony SIRC, RC5/RC6, Pronto and raw codes
+  * Backup and restore all remotes as one file
+  * Light, dark and pure black themes, Material You, tablet layout
 
   Needs a phone with a built-in IR blaster.
 

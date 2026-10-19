@@ -8,19 +8,18 @@ IssueTracker: https://github.com/VoidedKN0X/ProxCtrl/issues
 Changelog: https://github.com/VoidedKN0X/ProxCtrl/releases
 Donate: https://github.com/sponsors/VoidedKN0X
 Name: ProxCtrl
-Summary: Manage your Proxmox VE server
+Summary: Monitor your Proxmox VE node and manage containers and VMs
 Description: |
   Manage your Proxmox VE 8 or 9 server from your phone: a fast, touch-first alternative to the web UI.
 
-  * Overview of your node, with an attention list for full disks, high memory, failed backups and more
-  * Guests: all your containers and VMs with CPU, memory and disk use, tags, search, sorting and bulk start/stop
-  * Guest pages with graphs, power controls, console, snapshots, backups and restore
-  * Storage: storages, backups, ISOs and templates, disks with SMART health, ZFS and LVM
-  * Tasks with live logs
-  * Node: services, updates, network and a shell
-  * Notifications without Google services: polling, or UnifiedPush through your own ntfy
-  * Widgets and a Quick Settings tile
-  * Safe by design: read-only mode that blocks every change, confirmation before bulk actions, certificate pinning and screenshot protection
+  * Overview with live node graphs and a needs-attention list
+  * All containers and VMs with usage, tags, search, sorting and bulk power actions
+  * Guest pages with graphs, power controls, IP addresses and notes
+  * Consoles for containers and VMs, and a node shell
+  * Snapshots, backups and restore, confirmed by typing the guest ID
+  * Notifications without Google: background checks or UnifiedPush via ntfy
+  * Several servers, API token or password with two-factor
+  * Read-only mode, certificate pinning and screenshot protection
 
   Unofficial app, not affiliated with Proxmox Server Solutions.
 

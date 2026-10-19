@@ -9,21 +9,20 @@ IssueTracker: https://github.com/VoidedKN0X/ArrCtrl/issues
 Changelog: https://github.com/VoidedKN0X/ArrCtrl/releases
 Donate: https://github.com/sponsors/VoidedKN0X
 Name: ArrCtrl
-Summary: Radarr, Sonarr, Prowlarr, Bazarr, qBittorrent, autobrr and Cleanuparr in one app
+Summary: One app for your self-hosted Radarr, Sonarr, qBittorrent and the rest
 Description: |
   One app for your whole self-hosted download stack: Radarr, Sonarr, Prowlarr, Bazarr, qBittorrent, autobrr and Cleanuparr.
 
-  * Movies and Series: your Radarr and Sonarr libraries with automatic and interactive search, monitoring, quality profiles, renaming and bulk edits
-  * Calendar with upcoming movies and episodes from both
-  * Activity: the Radarr and Sonarr queues with manual import, and your qBittorrent torrents with full controls
-  * Add torrents from magnet links and .torrent files, straight from the share sheet
-  * Subtitles through Bazarr on every movie and episode
-  * Prowlarr indexers and cross-indexer search, autobrr filters and releases, Cleanuparr stats and jobs
-  * System health for every server in one place, with low disk space warnings
-  * Notifications without Google services: polling, or instant push through your own ntfy server
-  * Widgets for upcoming releases and active downloads, and a Quick Settings tile for qBittorrent's alternative speed limits
-  * Every service is optional, and you can add more than one of each
-  * Self-signed certificates trusted per server, by fingerprint
+  * Radarr movies and Sonarr series with search, monitoring, renaming and bulk edits
+  * Calendar of upcoming movies and episodes
+  * Activity: queues with manual import, qBittorrent torrents and history
+  * Add torrents from magnet links and .torrent files
+  * Bazarr subtitles in any language for every movie and episode
+  * Prowlarr, autobrr and Cleanuparr tools, and System health with disk space warnings
+  * Notifications without Google: background checks or UnifiedPush via ntfy
+  * Upcoming and Downloads widgets, and a tile for qBittorrent's alternative speed limits
+  * Several servers of each type, imported by paste or QR code
+  * Self-signed certificates trusted by fingerprint, encrypted API keys
 
   Unofficial app, not affiliated with any of these projects.
 

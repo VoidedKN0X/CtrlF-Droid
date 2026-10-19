@@ -12,13 +12,17 @@ Summary: Watch and review your Frigate NVR cameras
 Description: |
   Watch and review your self-hosted Frigate NVR cameras.
 
-  * Camera grid with live snapshots and alert badges
-  * Low-latency live view with sound, zoom and picture-in-picture
-  * Two-way talk and PTZ controls
-  * History with a precise, zoomable timeline
-  * Events list, clips to save or share
-  * System health: CPU, GPU, detectors and storage
-  * App lock with PIN and fingerprint
+  * Camera grid with live snapshots, camera groups and new-alert badges
+  * Live view about one second behind, with sound, zoom and picture-in-picture
+  * Two-way talk on cameras with a speaker
+  * PTZ controls: joystick, zoom, focus and presets
+  * History with a precise pinch-to-zoom timeline of recordings, motion and alerts
+  * Events list: swipe to mark reviewed, filter by unreviewed or alerts
+  * Save or share clips of any event or time range
+  * Camera switches: on/off, detection, recording, snapshots, audio detection, notifications
+  * System health: CPU, GPU, memory, detectors, camera FPS and storage
+  * App lock with PIN and fingerprint; cameras hidden from screenshots and recents
+  * Self-signed certificates pinned by fingerprint
 
   Needs Frigate 0.14 or newer. Unofficial app, not affiliated with the Frigate project.
 

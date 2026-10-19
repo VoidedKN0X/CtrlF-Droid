@@ -8,19 +8,20 @@ IssueTracker: https://github.com/VoidedKN0X/PaperCtrl/issues
 Changelog: https://github.com/VoidedKN0X/PaperCtrl/releases
 Donate: https://github.com/sponsors/VoidedKN0X
 Name: PaperCtrl
-Summary: Scan and browse documents on Paperless-ngx
+Summary: Scan paper into Paperless-ngx and browse your documents
 Description: |
   Scan paper into your self-hosted Paperless-ngx server and browse your documents.
 
-  * Scanner with edge detection, auto-capture, multi-page documents, cropping and filters, built entirely on open-source libraries
-  * Upload queue that works offline and uploads when your server is reachable
-  * Share to PaperCtrl from any app, for PDFs, images and other files Paperless accepts
-  * Inbox to sort new documents with swipes and Paperless' own suggestions
+  * Document scanner with edge detection, auto-capture, multi-page and filters
+  * Title, tags, correspondent and ASN before uploading, with ASN label scanning
+  * Upload queue that works offline, and Share to PaperCtrl from any app
+  * Inbox with swipes and Paperless suggestions
   * Documents with full-text search, filters, saved views and bulk editing
-  * Document viewer for the original and the searchable (OCR'd) version, with notes, history and share links
-  * Organise tags, correspondents, document types, storage paths and custom fields
-  * Widget, Quick Settings tile and shortcuts to start a scan in one tap
-  * Several servers, and self-signed certificates you confirm by fingerprint
+  * Document viewer with notes, history and share links
+  * Organise tags, correspondents, types, storage paths, custom fields and trash
+  * Notifications, daily inbox reminder and ntfy push from Paperless
+  * Widget, quick settings tile and shortcuts to scan
+  * Several servers, two-factor sign-in, app lock and screenshot blocking
 
   Needs a 64-bit ARM phone. Unofficial app, not affiliated with Paperless-ngx.
 

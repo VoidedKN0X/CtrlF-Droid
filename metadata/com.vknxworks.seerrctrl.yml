@@ -12,12 +12,17 @@ Summary: Request movies and shows on Seerr / Jellyseerr
 Description: |
   Discover, request and manage movies and series on your self-hosted Seerr, Jellyseerr or Overseerr server.
 
-  * Sign in with Jellyfin/Emby, Plex or a Seerr account
-  * Discover with the same sliders and filters as the web UI
-  * Request in HD or 4K, with season picking
-  * Swipe to approve or decline requests
-  * Notifications with Approve/Decline buttons
-  * Upcoming calendar, issues and full admin settings
+  * Sign in with Jellyfin/Emby (Quick Connect), Plex or a Seerr account
+  * Discover with the web UI's sliders and filters, plus search
+  * Title pages with ratings, cast, collections and recommendations
+  * Request movies and series, in 4K too, with season picking and advanced options
+  * Approve or decline requests with a swipe
+  * Notifications for your requests and issues, with Approve/Decline for managers
+  * Upcoming calendar, Watchlist and Profile
+  * Report, comment on and resolve issues
+  * Full admin: users, permissions, quotas, blocklist, Radarr/Sonarr, jobs and settings
+  * App lock with PIN and fingerprint; tablet and foldable layout
+  * Private by default: hidden from screenshots, no Gravatar or Plex pictures unless you turn them on
 
   Unofficial app, not affiliated with the Seerr, Jellyseerr or Overseerr projects.
 
