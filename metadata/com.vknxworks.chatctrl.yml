@@ -17,7 +17,7 @@ Description: |
   * End-to-end encryption with device verification and key backup
   * Replies, threads, reactions, edits, polls, voice messages and files
   * Search inside chats, including encrypted ones
-  * Push notifications through ntfy (UnifiedPush), no Google services
+  * Push notifications through ntfy, with a background check as a fallback
   * Link previews, drafts and six chat bubble styles
   * Create rooms, direct chats, explore public rooms, moderation
   * Device list and app lock with PIN and fingerprint
@@ -25,7 +25,7 @@ Description: |
 
   Needs a server with Simplified Sliding Sync (Synapse 1.114 or newer). 64-bit ARM only.
 
-  Google-free: no Google Play services or Google libraries that contact Google.
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
   Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
 

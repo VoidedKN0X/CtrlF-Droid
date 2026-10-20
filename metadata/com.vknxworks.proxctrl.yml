@@ -22,13 +22,13 @@ Description: |
   * Tasks with live logs, history filters and Stop
   * Node: services, updates with changelogs, network and SDN, reboot and shutdown, Wake-on-LAN
   * Home screen widgets and a Quick Settings tile
-  * Notifications without Google: background checks or UnifiedPush via ntfy
+  * Notifications through ntfy, with the app's own background checks as a fallback
   * Several servers, API token or password with two-factor
   * Read-only mode, typed confirmations for dangerous actions, optional fingerprint or screen-lock app lock, certificate pinning and screenshot protection
 
   Unofficial app, not affiliated with Proxmox Server Solutions.
 
-  Google-free: no Google Play services or Google libraries that contact Google.
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
   Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
 

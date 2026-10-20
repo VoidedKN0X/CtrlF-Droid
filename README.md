@@ -4,7 +4,7 @@
 
 Add this repo to F-Droid, Droid-ify or Neo Store and get every Ctrl app with automatic updates.
 
-Every Ctrl app is **Google-free** and **telemetry-free**: no Google Play services, no analytics, no crash reporting, no usage stats. They only talk to the servers you add.
+Every Ctrl app is **Google-free, de-Googled** and **telemetry-free**: no Google Play services, Firebase or other Google services, no analytics, no crash reporting, no usage stats. They work the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps), only talk to the servers you add, and apps with push notifications use ntfy.
 
 👉 **[Add the repo](https://voidedkn0x.github.io/CtrlF-Droid/)** (open on your phone, or scan the QR code there)
 
