@@ -6,7 +6,8 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ### Changed
 
-- **Link preview image** for the repo in `assets/social-preview.png`, with the CtrlF-Droid icon and "Every Ctrl app in one F-Droid repo, with automatic updates", for when the repo is shared on Reddit, Discord or elsewhere.
+- **Every listing says the app is telemetry-free.** The Ctrl apps no longer have optional usage stats, so the line about them is replaced by: no analytics, crash reporting, usage stats or tracking of any kind. BeamCtrl's listing also says it has no internet permission at all. The repo's README says the same.
+- **Link preview image** for the repo in `assets/social-preview.png`, with the CtrlF-Droid icon, "Every Ctrl app in one F-Droid repo, with automatic updates" and Google-free, Telemetry-free, GPL-3.0 and F-Droid tags, for when the repo is shared on Reddit, Discord or elsewhere.
 
 ## 2026-10-19
 
