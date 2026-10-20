@@ -19,13 +19,13 @@ Description: |
   * Documents with full-text search, filters, saved views and bulk editing
   * Document viewer with notes, history and share links
   * Organise tags, correspondents, types, storage paths, custom fields and trash
-  * Notifications, daily inbox reminder and ntfy push from Paperless
+  * Notifications, daily inbox reminder and push from Paperless through ntfy
   * Widget, quick settings tile and shortcuts to scan
   * Several servers, two-factor sign-in, app lock and screenshot blocking
 
   Needs a 64-bit ARM phone. Unofficial app, not affiliated with Paperless-ngx.
 
-  Google-free: no Google Play services or Google libraries that contact Google.
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
   Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
 

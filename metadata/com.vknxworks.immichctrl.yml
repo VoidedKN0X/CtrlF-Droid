@@ -25,7 +25,7 @@ Description: |
   * Home and public address: you choose which one the app uses; it never switches by itself
   * Admin tools: users, jobs, storage and server alerts
 
-  Google-free: no Google Play services or Google libraries that contact Google.
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
   Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
 

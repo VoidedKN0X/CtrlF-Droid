@@ -26,7 +26,7 @@ Description: |
 
   Works with Bambuddy, Spoolman, or both. Unofficial app, not affiliated with Bambu Lab, Bambuddy or Spoolman.
 
-  Google-free: no Google Play services or Google libraries that contact Google.
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
   Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
 

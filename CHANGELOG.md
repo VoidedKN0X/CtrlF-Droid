@@ -6,6 +6,8 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ### Changed
 
+- **Every listing says the app is Google-free and de-Googled**, and works the same on de-Googled phones such as GrapheneOS, CalyxOS, /e/OS and LineageOS without Google apps. The repo's README says the same.
+- **ArrCtrl, ProxCtrl and ElementCtrl's listings say push notifications come through ntfy**, with the app's own background checks as a fallback (they no longer mention UnifiedPush or other push apps). PaperCtrl's says Paperless pushes come through ntfy.
 - **Every listing says the app is telemetry-free.** The Ctrl apps no longer have optional usage stats, so the line about them is replaced by: no analytics, crash reporting, usage stats or tracking of any kind. BeamCtrl's listing also says it has no internet permission at all. The repo's README says the same.
 - **Link preview image** for the repo in `assets/social-preview.png`, with the CtrlF-Droid icon, "Every Ctrl app in one F-Droid repo, with automatic updates" and Google-free, Telemetry-free, GPL-3.0 and F-Droid tags, for when the repo is shared on Reddit, Discord or elsewhere.
 

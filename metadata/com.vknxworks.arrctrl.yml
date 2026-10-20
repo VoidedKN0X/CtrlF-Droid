@@ -19,14 +19,14 @@ Description: |
   * Add torrents from magnet links and .torrent files
   * Bazarr subtitles in any language for every movie and episode
   * Prowlarr, autobrr and Cleanuparr tools, and System health with disk space warnings
-  * Notifications without Google: background checks or UnifiedPush via ntfy
+  * Notifications through ntfy, with the app's own background checks as a fallback
   * Upcoming and Downloads widgets, and a tile for qBittorrent's alternative speed limits
   * Several servers of each type, imported by paste or QR code
   * Self-signed certificates trusted by fingerprint, encrypted API keys
 
   Unofficial app, not affiliated with any of these projects.
 
-  Google-free: no Google Play services or Google libraries that contact Google.
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
   Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
 
