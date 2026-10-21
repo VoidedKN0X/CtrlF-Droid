@@ -1,0 +1,32 @@
+Categories:
+- Writing
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/MemoCtrl
+SourceCode: https://github.com/VoidedKN0X/MemoCtrl
+IssueTracker: https://github.com/VoidedKN0X/MemoCtrl/issues
+Changelog: https://github.com/VoidedKN0X/MemoCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: MemoCtrl
+Summary: Your self-hosted Memos, on your phone
+Description: |
+  Capture thoughts, links and to-dos on your self-hosted Memos server, like tweeting to yourself.
+
+  * Timeline with pinned memos first, and pull to sync
+  * Works offline: changes sync when your server can be reached, without losing anything
+  * Editor with formatting, tasks, tags, pictures, the camera, attachments and location
+  * Markdown the way Memos shows it, with tappable tasks and #tags
+  * Drafts or autosave, pin, share, archive and delete
+  * Tags with a heatmap, offline search, Explore, archive and attachments
+  * Share to MemoCtrl, a New memo shortcut, and Memos and Memory widgets
+  * App lock with its own PIN and optional fingerprint unlock
+  * Client certificates (mutual TLS), several servers and accounts
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 7a289070084e0ff111a7c2db73385cec798c4ba3ac45a5723feb76e18f25664d
