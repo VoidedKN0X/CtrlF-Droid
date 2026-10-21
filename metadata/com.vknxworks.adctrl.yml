@@ -1,0 +1,31 @@
+Categories:
+- Connectivity
+- Security
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/AdCtrl
+SourceCode: https://github.com/VoidedKN0X/AdCtrl
+IssueTracker: https://github.com/VoidedKN0X/AdCtrl/issues
+Changelog: https://github.com/VoidedKN0X/AdCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: AdCtrl
+Summary: Control your AdGuard Home DNS server from your phone
+Description: |
+  A fast, touch-first app for your self-hosted AdGuard Home server: see what's blocked, unblock a site that broke, pause protection and keep an eye on the devices on your network. AdCtrl is in early development and gets new parts with each release.
+
+  * Overview with a protection switch, pause with countdown, statistics, top domains, clients and upstreams
+  * Live query log with search and filters, and one-tap block or unblock of any domain
+  * Blocklists, allowlists, custom rules, blocked services, DNS rewrites, safe browsing, parental control and safe search
+  * Clients with their own settings, and blocking a device entirely
+  * Quick Settings tile to pause protection or turn it back on
+  * Several servers, with "apply to all servers"
+  * Read-only mode, confirmation before changes, certificate pinning and screenshot protection
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 6b5a64777a507214aadfb6e6630331a8d740a840ced4a6f96db6f466d0edddce

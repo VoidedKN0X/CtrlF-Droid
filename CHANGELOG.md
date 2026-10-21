@@ -2,6 +2,14 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-10-21
+
+### New
+
+- **AdCtrl** is in the repo: control your AdGuard Home DNS server from your phone (overview and pause, live query log with one-tap block/unblock, filters and rules, clients, Quick Settings tile). It's in early development, so new parts arrive with each release.
+- **MemoCtrl** is in the repo: your self-hosted Memos on your phone, with offline sync, a full editor, widgets and an app lock.
+- Both are pinned to their own release signing keys like every other app, and the repo's README lists them.
+
 ## 2026-10-20
 
 ### Changed
