@@ -6,6 +6,7 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ### Changed
 
+- **AdCtrl's listing is no longer "in early development"**: it now lists the home screen widget, the app shortcuts (Pause protection, Query log, Search the query log, Blocked queries), notifications from its background checks and the app lock, which arrived in AdCtrl 0.9.0.
 - **ElementCtrl's listing mentions calls**: voice and video calls through your own server (MatrixRTC/Element Call), which work with Element X and Element Web.
 
 ### New
