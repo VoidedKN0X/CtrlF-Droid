@@ -4,6 +4,10 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ## 2026-10-21
 
+### Changed
+
+- **ElementCtrl's listing mentions calls**: voice and video calls through your own server (MatrixRTC/Element Call), which work with Element X and Element Web.
+
 ### New
 
 - **AdCtrl** is in the repo: control your AdGuard Home DNS server from your phone (overview and pause, live query log with one-tap block/unblock, filters and rules, clients, Quick Settings tile). It's in early development, so new parts arrive with each release.
