@@ -18,9 +18,10 @@ Description: |
   * Replies, threads, reactions, edits, polls, voice messages and files
   * Search inside chats, including encrypted ones
   * Push notifications through ntfy, with a background check as a fallback
+  * Voice and video calls through your own server (MatrixRTC/Element Call, works with Element X and Element Web)
   * Link previews, drafts and six chat bubble styles
   * Create rooms, direct chats, explore public rooms, moderation
-  * Device list and app lock with PIN and fingerprint
+  * Device list, and app lock with its own PIN and optional fingerprint
   * Two-pane layout on tablets and foldables
 
   Needs a server with Simplified Sliding Sync (Synapse 1.114 or newer). 64-bit ARM only.
