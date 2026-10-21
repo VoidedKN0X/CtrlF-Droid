@@ -11,15 +11,18 @@ Donate: https://github.com/sponsors/VoidedKN0X
 Name: AdCtrl
 Summary: Control your AdGuard Home DNS server from your phone
 Description: |
-  A fast, touch-first app for your self-hosted AdGuard Home server: see what's blocked, unblock a site that broke, pause protection and keep an eye on the devices on your network. AdCtrl is in early development and gets new parts with each release.
+  A fast, touch-first app for your self-hosted AdGuard Home server: see what's blocked, unblock a site that broke, pause protection and keep an eye on the devices on your network, from the app, a Quick Settings tile, a home screen widget or app shortcuts.
 
   * Overview with a protection switch, pause with countdown, statistics, top domains, clients and upstreams
   * Live query log with search and filters, and one-tap block or unblock of any domain
   * Blocklists, allowlists, custom rules, blocked services, DNS rewrites, safe browsing, parental control and safe search
   * Clients with their own settings, and blocking a device entirely
   * Quick Settings tile to pause protection or turn it back on
+  * Home screen widget with protection on, paused (with a countdown) or off, and the last 24 hours' queries and blocked share
+  * App shortcuts: Pause protection, Query log, Search the query log, Blocked queries
+  * Notifications from background checks: protection turned off or paused for too long, unreachable servers, filter lists that stop updating, AdGuard Home updates
   * Several servers, with "apply to all servers"
-  * Read-only mode, confirmation before changes, certificate pinning and screenshot protection
+  * App lock with its own PIN and fingerprint, read-only mode, confirmation before changes, certificate pinning and screenshot protection
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
