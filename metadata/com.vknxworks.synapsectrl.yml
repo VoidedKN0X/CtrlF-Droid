@@ -1,0 +1,31 @@
+Categories:
+- Connectivity
+- System
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/SynapseCtrl
+SourceCode: https://github.com/VoidedKN0X/SynapseCtrl
+IssueTracker: https://github.com/VoidedKN0X/SynapseCtrl/issues
+Changelog: https://github.com/VoidedKN0X/SynapseCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: SynapseCtrl
+Summary: Administer your Matrix Synapse server from your phone
+Description: |
+  An admin app for your self-hosted Matrix Synapse server, using Synapse's admin API. It's an admin tool, not a chat client: for chatting, use ChatCtrl or another Matrix app. In early development: new parts arrive with each release.
+
+  * Sign in with an admin account's password (SynapseCtrl gets its own access token and never stores the password), or paste an access token
+  * Checks that the account is a server admin, and shows the Synapse version
+  * Works with Synapse's LAN address, so the admin API can stay off the internet
+  * Removing a server logs SynapseCtrl's access token out on the server
+  * Notifications from background checks when a server can't be reached, with optional push through ntfy
+  * Several servers, read-only mode, app lock with its own PIN and fingerprint, certificate pinning and screenshot protection
+  * Coming next: overview and health checks, users, invites with registration tokens, rooms, media cleanup, reports and federation
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- a3287a5829fd9f19c0badb485f6539cf0a908eb4a787c0060446d0604f748ce2

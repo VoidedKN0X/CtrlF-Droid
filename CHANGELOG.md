@@ -2,6 +2,13 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-10-31
+
+### New
+
+- **SynapseCtrl** is in the repo: administer your self-hosted Matrix Synapse server from your phone. Version 0.1.0 signs in with an admin account (password or access token), checks admin access and shows the Synapse version; users, invites, rooms, media, reports and health checks arrive with the next releases. It's in early development, so new parts arrive with each release.
+- It's pinned to its own release signing key like every other app, and the repo's README lists it.
+
 ## 2026-10-21
 
 ### Changed
