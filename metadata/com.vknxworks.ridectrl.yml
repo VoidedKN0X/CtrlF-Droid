@@ -1,0 +1,34 @@
+Categories:
+- Science & Education
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/RideCtrl
+SourceCode: https://github.com/VoidedKN0X/RideCtrl
+IssueTracker: https://github.com/VoidedKN0X/RideCtrl/issues
+Changelog: https://github.com/VoidedKN0X/RideCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: RideCtrl
+Summary: Offline maintenance, fuel and mod log for your scooter, motorbike or car
+Description: |
+  An offline log for everything about your vehicles: fuel and consumption, premix, services and when the next one is due, parts, mods, temperature readings and documents. Made first for 2-stroke scooters, but it works for any vehicle.
+
+  Version 0.1 is the app's foundation: the look, app lock, privacy switches and unit settings. It's in early development, so new parts arrive with each release:
+
+  * Garage with a dashboard per vehicle
+  * Fuel log with consumption between full tanks, and a premix calculator for use at the pump
+  * Service items with your own km and time intervals, service records and an overdue list
+  * Local reminders for maintenance (by date and by km) and document expiry
+  * Parts inventory, mods log and a specs sheet per vehicle
+  * Temperature log with charts, to compare jetting or exhaust changes
+  * Total cost of ownership, backup to one file (optionally encrypted) and CSV export
+
+  Units your way: km or miles, litres or gallons, °C or °F, and your currency. App lock with its own PIN and optional fingerprint unlock.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google libraries, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. RideCtrl has no internet permission at all, so it never connects to anything.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- d545bfb01526b1b646e56497fc115d42ea90d09c1186d6c2695a960b1c4573b8

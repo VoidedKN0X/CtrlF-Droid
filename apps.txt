@@ -13,6 +13,7 @@ VoidedKN0X/NaviCtrl
 VoidedKN0X/PaperCtrl
 VoidedKN0X/PrintCtrl
 VoidedKN0X/ProxCtrl
+VoidedKN0X/RideCtrl
 VoidedKN0X/SeerrCtrl
 VoidedKN0X/SynapseCtrl
 VoidedKN0X/TrueCtrl

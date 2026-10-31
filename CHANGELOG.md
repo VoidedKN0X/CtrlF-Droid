@@ -8,6 +8,7 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 - **SynapseCtrl** is in the repo: administer your self-hosted Matrix Synapse server from your phone. Version 0.1.0 signs in with an admin account (password or access token), checks admin access and shows the Synapse version; users, invites, rooms, media, reports and health checks arrive with the next releases. It's in early development, so new parts arrive with each release.
 - It's pinned to its own release signing key like every other app, and the repo's README lists it.
+- **RideCtrl** is in the repo: an offline maintenance, fuel and mod log for your scooter, motorbike or car. Version 0.1.0 is the app's foundation (look, app lock, privacy switches and units); vehicles, the fuel log and premix calculator, maintenance, parts and mods, temperature log, costs and backup arrive with the next releases. It has no internet permission, and it's pinned to its own release signing key (d545bfb0…4573b8).
 
 ## 2026-10-21
 
