@@ -11,15 +11,18 @@ Donate: https://github.com/sponsors/VoidedKN0X
 Name: SynapseCtrl
 Summary: Administer your Matrix Synapse server from your phone
 Description: |
-  An admin app for your self-hosted Matrix Synapse server, using Synapse's admin API. It's an admin tool, not a chat client: for chatting, use ChatCtrl or another Matrix app. In early development: new parts arrive with each release.
+  An admin app for your self-hosted Matrix Synapse server, using Synapse's admin API. It's an admin tool, not a chat client: for chatting, use ChatCtrl or another Matrix app.
 
-  * Sign in with an admin account's password (SynapseCtrl gets its own access token and never stores the password), or paste an access token
-  * Checks that the account is a server admin, and shows the Synapse version
+  * Overview with users, rooms, media and reports, a needs-attention list and health checks for discovery, federation and calls (MatrixRTC), without any outside tester
+  * Users: search, filter and sort; create users; devices, rooms, media and rate limits; reset password, admin, shadow-ban, suspend, lock and deactivate (with GDPR erase)
+  * Invites: registration tokens, and a ready-made invite to share
+  * Rooms: members and settings, make yourself room admin, block, quarantine and delete with live progress
+  * Media: storage per user, purge cached remote media, delete old or large local media, quarantine
+  * Event and user reports, federation destinations with reset connection, and server notices
+  * Notifications from background checks (new reports, failing health checks, new users, media over a limit, unreachable servers), with optional push through ntfy
+  * Home screen widget and app shortcuts: New invite, Users, Reports
   * Works with Synapse's LAN address, so the admin API can stay off the internet
-  * Removing a server logs SynapseCtrl's access token out on the server
-  * Notifications from background checks when a server can't be reached, with optional push through ntfy
-  * Several servers, read-only mode, app lock with its own PIN and fingerprint, certificate pinning and screenshot protection
-  * Coming next: overview and health checks, users, invites with registration tokens, rooms, media cleanup, reports and federation
+  * Several servers, read-only mode, typed confirmation for anything that can't be undone, app lock with its own PIN and fingerprint, certificate pinning and screenshot protection
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 

@@ -10,6 +10,10 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ## 2026-10-31
 
+### Changed
+
+- **SynapseCtrl's listing is no longer "in early development"**: it now lists the Overview with health checks, users, invites, rooms, media cleanup, reports, federation, server notices, notifications, the widget and the app shortcuts, which arrived in SynapseCtrl 1.0.0.
+
 ### New
 
 - **SynapseCtrl** is in the repo: administer your self-hosted Matrix Synapse server from your phone. Version 0.1.0 signs in with an admin account (password or access token), checks admin access and shows the Synapse version; users, invites, rooms, media, reports and health checks arrive with the next releases. It's in early development, so new parts arrive with each release.
