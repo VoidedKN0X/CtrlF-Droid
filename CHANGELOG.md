@@ -2,6 +2,12 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-10-31 (later)
+
+### Changed
+
+- **RideCtrl** listing: describes the complete app from version 0.2.0 (garage, fuel log and premix calculator, maintenance and reminders, parts, mods, specs, temperature log, costs, backup, widget and shortcuts) and its two permissions; no longer marked as early development.
+
 ## 2026-10-31
 
 ### New
