@@ -20,6 +20,12 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 - It's pinned to its own release signing key like every other app, and the repo's README lists it.
 - **RideCtrl** is in the repo: an offline maintenance, fuel and mod log for your scooter, motorbike or car. Version 0.1.0 is the app's foundation (look, app lock, privacy switches and units); vehicles, the fuel log and premix calculator, maintenance, parts and mods, temperature log, costs and backup arrive with the next releases. It has no internet permission, and it's pinned to its own release signing key (d545bfb0…4573b8).
 
+## 2026-10-31
+
+### New
+
+- **WrtCtrl** is in the repo: manage your OpenWrt router from your phone (overview with live WAN throughput, every device on your network with static leases, blocking and Wake-on-LAN, Wi-Fi and guest Wi-Fi, DHCP, port forwards, interfaces, services, package updates, logs, backups and reboot), with every risky change applied with OpenWrt's rollback. It's pinned to its own release signing key like every other app, and the repo's README lists it. It appears in the repo as soon as its first signed release is published.
+
 ## 2026-10-21
 
 ### Changed

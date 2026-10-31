@@ -1,0 +1,34 @@
+Categories:
+- System
+- Connectivity
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/WrtCtrl
+SourceCode: https://github.com/VoidedKN0X/WrtCtrl
+IssueTracker: https://github.com/VoidedKN0X/WrtCtrl/issues
+Changelog: https://github.com/VoidedKN0X/WrtCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: WrtCtrl
+Summary: Manage your OpenWrt router: devices, Wi-Fi, DHCP, port forwards and more
+Description: |
+  Manage your OpenWrt router from your phone: a fast, touch-first alternative to LuCI, through the same ubus API LuCI uses.
+
+  * Overview with live WAN throughput, CPU, memory, storage, WAN and IPv6 status, Wi-Fi radios and a needs-attention list
+  * Every device on your network with vendor, connection, signal and lease, and actions: static lease, disconnect from Wi-Fi, block from the internet, Wake-on-LAN, notes
+  * Wi-Fi and guest Wi-Fi, DHCP and static leases, port forwards and interfaces
+  * Services, package updates (apk or opkg), the system log, config backups and reboot
+  * Every risky change applied with OpenWrt's rollback: if a change cuts you off, the router undoes it by itself
+  * Notifications for router down, WAN down and up, new devices and package updates, woken by your self-hosted ntfy
+  * Home screen widget, a guest Wi-Fi Quick Settings tile and app shortcuts
+  * Several routers, a dedicated least-privilege login (see the README), read-only mode, app lock with its own PIN, certificate pinning and screenshot protection
+
+  Unofficial app, not affiliated with the OpenWrt project.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 0c3b15a411d74183baf8062b312429664e0922e4bc06be6b8b02654a4ead80cb
