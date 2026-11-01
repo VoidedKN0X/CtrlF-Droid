@@ -26,6 +26,10 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 - **WrtCtrl** is in the repo: manage your OpenWrt router from your phone (overview with live WAN throughput, every device on your network with static leases, blocking and Wake-on-LAN, Wi-Fi and guest Wi-Fi, DHCP, port forwards, interfaces, services, package updates, logs, backups and reboot), with every risky change applied with OpenWrt's rollback. It's pinned to its own release signing key like every other app, and the repo's README lists it. It appears in the repo as soon as its first signed release is published.
 
+### Fixed
+
+- **The repo updates again.** WrtCtrl's listing had a colon in its one-line summary that the F-Droid tools read as a new field, so the repo update stopped with "could not parse" and no app in the repo was updated until this fix. The summary is now written without it.
+
 ## 2026-10-21
 
 ### Changed

@@ -9,7 +9,7 @@ IssueTracker: https://github.com/VoidedKN0X/WrtCtrl/issues
 Changelog: https://github.com/VoidedKN0X/WrtCtrl/releases
 Donate: https://github.com/sponsors/VoidedKN0X
 Name: WrtCtrl
-Summary: Manage your OpenWrt router: devices, Wi-Fi, DHCP, port forwards and more
+Summary: Manage your OpenWrt router (devices, Wi-Fi, DHCP, port forwards and more)
 Description: |
   Manage your OpenWrt router from your phone: a fast, touch-first alternative to LuCI, through the same ubus API LuCI uses.
 
