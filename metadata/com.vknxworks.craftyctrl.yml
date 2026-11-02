@@ -12,7 +12,7 @@ Summary: Manage your Crafty Controller Minecraft servers from your phone
 Description: |
   Manage your Minecraft servers on a self-hosted Crafty Controller 4 panel.
 
-  * Server list with live status, CPU, memory, players and uptime
+  * Server list with live status, CPU, memory, players and uptime, and a broadcast to every running server
   * Start, restart, stop and kill with a fingerprint check and optional in-game countdown
   * Live console with search, filters, quick commands and name completion
   * CPU, memory and player history charts
@@ -21,13 +21,16 @@ Description: |
   * File browser with text editor, upload and unzip
   * Backups and scheduled tasks
   * Create, clone, update and delete Java and Bedrock servers
-  * Crash and stop alerts, app lock with PIN and fingerprint
+  * Crash, stop and player join/leave alerts, with optional instant push from Crafty through ntfy
+  * App lock with its own PIN and fingerprint, and switches to hide the app from screenshots and recent apps
 
-  Needs Crafty Controller 4.x reachable over HTTPS. Unofficial app, not affiliated with the Crafty Controller team.
+  Needs Crafty Controller 4.x over HTTPS with a certificate Android trusts (plain HTTP only for your own panel, after a warning), and Android 13 or newer on a 64-bit ARM phone. Unofficial app, not affiliated with the Crafty Controller team.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
   Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
+
+  Open source and built in the open: CraftyCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
 
 # SHA-256 of the release signing certificate. APKs signed by any other key are
 # rejected and nothing is published (scripts/add_apk.py and fdroid update).

@@ -103,6 +103,13 @@ page = f"""<!doctype html>
   .qr {{ background:#fff; border-radius:12px; padding:8px; width:180px; }}
   .qr svg {{ display:block; width:100%; height:auto; }}
   code {{ font-size:.8rem; word-break:break-all; color:var(--muted); }}
+  .help {{ color:var(--muted); font-size:.9rem; margin:16px 0 4px; }}
+  .trust {{ background:var(--card); border:1px solid var(--line); border-radius:20px; padding:24px; margin:0 0 32px; }}
+  .trust h2 {{ margin:0 0 8px; font-size:1.2rem; }}
+  .trust ul {{ margin:0; padding-left:20px; color:var(--muted); }}
+  .trust li {{ margin:8px 0; }}
+  .trust strong {{ color:var(--fg); }}
+  a {{ color:var(--accent); }}
   .grid {{ display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:12px; }}
   .card {{ display:flex; gap:14px; align-items:center; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:14px; color:inherit; text-decoration:none; }}
   .card:hover {{ border-color:var(--accent); }}
@@ -135,9 +142,22 @@ page = f"""<!doctype html>
         <li>All Ctrl apps appear in your store, with automatic updates.</li>
       </ol>
       <a class="btn" href="{html.escape(add_app)}">Add to F-Droid</a>
+      <p class="help">Nothing happens when you tap the button? In your store app, open <strong>Settings › Repositories</strong>, tap <strong>+</strong> and paste this address:</p>
       <p><code>{html.escape(add_https)}</code></p>
     </div>
     <div class="qr">{qr_svg}</div>
+  </section>
+
+  <section class="trust">
+    <h2>Why you can trust these apps</h2>
+    <ul>
+      <li><strong>Open source.</strong> Every Ctrl app's full code is public on GitHub under the GPL-3.0 licence. Tap an app below to read it.</li>
+      <li><strong>Built in the open.</strong> Each release is built from that public code by GitHub Actions, not on a personal computer.</li>
+      <li><strong>Checked before it's published.</strong> Every app is pinned to its own release signing key. An APK signed by any other key is refused, and nothing is published. Android also refuses updates signed with a different key.</li>
+      <li><strong>Signed repo.</strong> This repo's index is signed. Your store app checks it against this fingerprint:<br><code>{html.escape(fingerprint)}</code></li>
+      <li><strong>Google-free and telemetry-free.</strong> No Google services, no analytics, no crash reporting, no tracking. The apps only talk to the servers you add.</li>
+      <li><strong>Honest about how they're made.</strong> The Ctrl series is a one-person project by VoidedKN0X. Much of the code is written with the help of AI (Claude, by Anthropic); I decide what each app does, review the changes and use the apps myself. Found a security problem? Each app's repo has a <em>Security</em> tab to report it privately.</li>
+    </ul>
   </section>
 
   <h2>Apps</h2>

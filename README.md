@@ -8,6 +8,23 @@ Every Ctrl app is **Google-free, de-Googled** and **telemetry-free**: no Google 
 
 👉 **[Add the repo](https://voidedkn0x.github.io/CtrlF-Droid/)** (open on your phone, or scan the QR code there)
 
+## New to F-Droid?
+
+F-Droid is an app store for free and open-source Android apps. You don't need a Google account.
+
+1. Install [F-Droid](https://f-droid.org), [Droid-ify](https://github.com/Droid-ify/client) or [Neo Store](https://github.com/NeoApplications/Neo-Store) on your phone. Android will ask you to allow installing apps from your browser; that's normal.
+2. On your phone, open the [CtrlF-Droid page](https://voidedkn0x.github.io/CtrlF-Droid/) and tap **Add to F-Droid**. Your store app opens and asks to add the repo; confirm.
+3. Nothing happened? In your store app, go to **Settings › Repositories**, tap **+**, and paste the repo address shown on that page.
+4. The Ctrl apps now show up in your store. Install the ones you want; updates arrive automatically.
+
+## Can I trust it?
+
+- **Open source.** Every app's full code is public on GitHub under the GPL-3.0 licence.
+- **Built in the open.** Each app's releases are built from that public code by GitHub Actions, not on a personal computer, and signed with that app's own release key.
+- **Checked before publishing.** This repo pins every app to its release signing key. An APK signed by any other key, or an APK that doesn't belong to the repo it came from, is refused and nothing is published (details in [How it works](#how-it-works)).
+- **Signed repo.** The repo index is signed with the CtrlF-Droid key. Your store app checks it against the fingerprint in the address on the [CtrlF-Droid page](https://voidedkn0x.github.io/CtrlF-Droid/), so nobody can quietly swap the apps.
+- **Honest about how it's made.** The Ctrl series is a one-person project by VoidedKN0X (VKNXWorks). Much of the code is written with the help of AI (Claude, by Anthropic). I decide what each app does, review the changes and use the apps myself. Every app has a changelog, and a **Security** tab where problems can be reported privately.
+
 ## Apps
 
 | App | What it's for |
@@ -53,3 +70,7 @@ The APKs are the same signed builds as on each app's Releases page.
 ## Support
 
 The Ctrl apps are free and open source. If they're useful to you, you can [support development on GitHub Sponsors](https://github.com/sponsors/VoidedKN0X).
+
+A problem with an app? Open an issue in that app's repo. A security problem? Please report it privately; see [SECURITY.md](SECURITY.md).
+
+The Ctrl apps are independent and aren't made by or affiliated with the projects whose servers they connect to.

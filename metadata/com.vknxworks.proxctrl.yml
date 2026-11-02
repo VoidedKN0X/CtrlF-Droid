@@ -13,24 +13,25 @@ Description: |
   Manage your Proxmox VE 8 or 9 server from your phone: a fast, touch-first alternative to the web UI.
 
   * Overview with live node graphs and a needs-attention list
-  * All containers and VMs with usage, tags, search, sorting and bulk power actions
+  * All containers and VMs with usage, tags, search, sorting and bulk power actions, and creating new ones
   * Guest pages with graphs, power controls, IP addresses, notes, resources, options and firewall
-  * Edit cores, memory and tags, grow disks, clone guests and make templates
+  * Edit cores, memory and tags, grow and move disks, clone guests and make templates
   * Consoles for containers and VMs, and a node shell
   * Snapshots, backups and restore
   * Storage: content, ISO upload, container templates, disks with SMART health, ZFS, LVM and backup jobs
   * Tasks with live logs, history filters and Stop
   * Node: services, updates with changelogs, network and SDN, reboot and shutdown, Wake-on-LAN
-  * Home screen widgets and a Quick Settings tile
-  * Notifications through ntfy, with the app's own background checks as a fallback
-  * Several servers, API token or password with two-factor
-  * Read-only mode, typed confirmations for dangerous actions, optional fingerprint or screen-lock app lock, certificate pinning and screenshot protection
+  * Notifications through ntfy with background checks as a fallback, home screen widgets and a Quick Settings tile
+  * Several servers, API token or password with two-factor; the last state stays on screen when offline
+  * Read-only mode, typed confirmations for dangerous actions, app lock with its own PIN and optional fingerprint, certificate pinning and screenshot protection
 
-  Unofficial app, not affiliated with Proxmox Server Solutions.
+  Needs Android 13 or newer on a 64-bit ARM phone. Unofficial app, not affiliated with Proxmox Server Solutions.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
   Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
+
+  Open source and built in the open: ProxCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
 
 # SHA-256 of the release signing certificate. APKs signed by any other key are
 # rejected and nothing is published (scripts/add_apk.py and fdroid update).

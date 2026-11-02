@@ -12,22 +12,25 @@ Summary: Scan paper into Paperless-ngx and browse your documents
 Description: |
   Scan paper into your self-hosted Paperless-ngx server and browse your documents.
 
-  * Document scanner with edge detection, auto-capture, multi-page and filters
+  * Document scanner with edge detection, auto-capture, multi-page and filters, or add from gallery
   * Title, tags, correspondent and ASN before uploading, with ASN label scanning
   * Upload queue that works offline, and Share to PaperCtrl from any app
   * Inbox with swipes and Paperless suggestions
   * Documents with full-text search, filters, saved views and bulk editing
   * Document viewer with notes, history and share links
+  * Page manager: delete, reorder, rotate and split pages on your server
   * Organise tags, correspondents, types, storage paths, custom fields and trash
   * Notifications, daily inbox reminder and push from Paperless through ntfy
   * Widget, quick settings tile and shortcuts to scan
   * Several servers, two-factor sign-in, app lock and screenshot blocking
 
-  Needs a 64-bit ARM phone. Unofficial app, not affiliated with Paperless-ngx.
+  Needs a recent Paperless-ngx server, and Android 13 or newer on a 64-bit ARM phone. Unofficial app, not affiliated with Paperless-ngx.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
   Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
+
+  Open source and built in the open: PaperCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
 
 # SHA-256 of the release signing certificate. APKs signed by any other key are
 # rejected and nothing is published (scripts/add_apk.py and fdroid update).

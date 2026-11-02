@@ -8,23 +8,30 @@ IssueTracker: https://github.com/VoidedKN0X/TrueCtrl/issues
 Changelog: https://github.com/VoidedKN0X/TrueCtrl/releases
 Donate: https://github.com/sponsors/VoidedKN0X
 Name: TrueCtrl
-Summary: Monitor your TrueNAS pools, disks, scrubs and alerts from your phone
+Summary: Monitor and manage your TrueNAS server from your phone
 Description: |
   Monitor and manage your TrueNAS server (25.04 or newer) from your phone: a fast, touch-first alternative to the web UI.
 
-  * Overview with a needs-attention list, system card and live graphs
+  * Overview with a needs-attention list, system card, live graphs and your pools
   * Live alerts with dismiss and restore
-  * Pools with health, space and layout
-  * Start, pause, resume and stop scrubs with live progress
+  * Pools with health, space and layout, and scrubs with live progress
+  * Datasets: create, quotas, lock and unlock encryption, and delete with a preview
   * Disks with temperatures, graphs and SMART health
-  * Several servers, API key or password with two-factor
-  * Read-only mode, certificate pinning and screenshot blocking
+  * Snapshot, replication, cloud sync and rsync tasks; take, roll back and clone snapshots
+  * SMB and NFS shares, who's connected, and the services behind them
+  * Apps and the app catalog, jobs, updates, network, the TrueNAS shell, reboot and shutdown
+  * Notifications from background checks, and TrueNAS alerts pushed through ntfy
+  * Widgets and a Quick Settings tile
+  * Several servers, API key or password with two-factor; the last state stays on screen when offline
+  * Read-only mode, typed confirmations, app lock with its own PIN and fingerprint, certificate pinning and screenshot blocking
 
-  Needs HTTPS on your TrueNAS (a self-signed certificate is fine). Unofficial app, not affiliated with iXsystems.
+  HTTPS on your TrueNAS is recommended (a self-signed certificate is fine); plain HTTP only for your own server, after a warning, with a password sign-in. Needs Android 13 or newer on a 64-bit ARM phone. Unofficial app, not affiliated with iXsystems.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
   Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
+
+  Open source and built in the open: TrueCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
 
 # SHA-256 of the release signing certificate. APKs signed by any other key are
 # rejected and nothing is published (scripts/add_apk.py and fdroid update).

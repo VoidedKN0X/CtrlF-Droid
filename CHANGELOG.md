@@ -2,6 +2,25 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-11-02
+
+### Changed
+
+- **Every app's listing is up to date.** Each description was checked against that app's README and code:
+  - Every listing now says it needs Android 13 or newer on a 64-bit ARM phone.
+  - **TrueCtrl** now describes the full app, not just monitoring: datasets, snapshots and protection tasks, SMB and NFS shares, apps, the shell, notifications, widgets and the tile, and the app lock. Its summary is now "Monitor and manage your TrueNAS server from your phone".
+  - **ArrCtrl** now mentions Lidarr. **ProxCtrl**'s app-lock line now describes its own PIN with optional fingerprint.
+  - **BeamCtrl** and **FilesCtrl** no longer mention theme options that were replaced by the Signal look.
+  - Missing features were added to most other listings, and server requirements were added where they were missing (AdGuard Home, Memos, Immich, Synapse, OpenWrt with LuCI).
+- **Every listing says how the app is made:** a one-person project by VoidedKN0X, much of it written with the help of AI (Claude), and every release built from the public code by GitHub Actions and signed with the same key.
+
+### New
+
+- **"Why you can trust these apps" on the repo page:** open source, built in the open, every APK checked against its app's signing key, the repo's signing fingerprint shown in full, Google-free and telemetry-free, and honest about AI use.
+- **Help when the Add button does nothing** on the repo page: where to paste the repo address by hand.
+- **README:** "New to F-Droid?" step-by-step instructions and a "Can I trust it?" section.
+- **SECURITY.md:** how to report a problem with the repo or an app privately, and how the repo is protected.
+
 ## 2026-10-31 (later)
 
 ### Changed

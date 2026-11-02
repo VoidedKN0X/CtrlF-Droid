@@ -24,9 +24,13 @@ Description: |
   * Works with Synapse's LAN address, so the admin API can stay off the internet
   * Several servers, read-only mode, typed confirmation for anything that can't be undone, app lock with its own PIN and fingerprint, certificate pinning and screenshot protection
 
+  Needs a Synapse server with a server admin account, and Android 13 or newer on a 64-bit ARM phone.
+
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
   Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind.
+
+  Open source and built in the open: SynapseCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
 
 # SHA-256 of the release signing certificate. APKs signed by any other key are
 # rejected and nothing is published (scripts/add_apk.py and fdroid update).
