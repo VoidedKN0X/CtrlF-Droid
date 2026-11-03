@@ -2,8 +2,8 @@
 VoidedKN0X/AdCtrl
 VoidedKN0X/ArrCtrl
 VoidedKN0X/BeamCtrl
-VoidedKN0X/CraftyCtrl
 VoidedKN0X/ChatCtrl
+VoidedKN0X/CraftyCtrl
 VoidedKN0X/FilesCtrl
 VoidedKN0X/FrigateCtrl
 VoidedKN0X/ImmichCtrl

@@ -35,4 +35,4 @@ Description: |
 # SHA-256 of the release signing certificate. APKs signed by any other key are
 # rejected and nothing is published (scripts/add_apk.py and fdroid update).
 AllowedAPKSigningKeys:
-- 0b60db941a7df4989e161160f1d3c49d174c4e262670cca54a866a60222c83d0
+- 9ee0fc5f523fe1b8d684964053e0aa56c65b4f726e5608de9dbe8b61ac929aba

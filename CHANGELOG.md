@@ -2,6 +2,13 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-11-03
+
+### Changed
+
+- **The Matrix chat app is now ChatCtrl.** It's in the repo as a new app, with its own app ID (`com.vknxworks.chatctrl`) and its own release signing key (9ee0fc5f…929aba), pinned like every other app. If you used the chat app before, install **ChatCtrl**, sign in again and verify the new session with your recovery key; the earlier install no longer gets updates from this repo.
+- **SynapseCtrl's listing** says to chat with ChatCtrl or another Matrix app, and the README's app list links to ChatCtrl.
+
 ## 2026-11-02
 
 ### Changed
