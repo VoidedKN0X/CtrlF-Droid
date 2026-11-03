@@ -1,0 +1,37 @@
+Categories:
+- Science & Education
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/SumCtrl
+SourceCode: https://github.com/VoidedKN0X/SumCtrl
+IssueTracker: https://github.com/VoidedKN0X/SumCtrl/issues
+Changelog: https://github.com/VoidedKN0X/SumCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: SumCtrl
+Summary: Offline calculator, unit converter and work tools
+Description: |
+  A calculator that replaces your phone's own, with exact decimal maths, a scientific keypad, history, a unit converter and tools for everyday shop sums.
+
+  * Exact decimal maths: 0.1 + 0.2 is 0.3, and money sums never pick up rounding noise
+  * Live result while you type, proper order of operations, auto-closing brackets and multiplication without a sign (2π, 3(4+1))
+  * Shop-style percentages: 200 + 21% is 242, 200 − 10% is 180
+  * Scientific keys: sin, cos, tan and inverses in degrees or radians, ln, log, eˣ, 10ˣ, √, powers, factorial, π, e and Ans
+  * History of finished sums, kept only on your phone; tap one to reuse its result, or turn history off
+  * Copy a result with a long press
+  * Unit converter with 13 categories: length, weight, volume, temperature, area, speed, data, time, pressure, energy, power, fuel use and angles
+  * Work tools: VAT (21 %, 12 %, 6 % or your own rate), discounts with an extra discount on top, margin and markup, instalments with interest, and percentages
+  * Decimal comma or point, thousands grouping and your currency for the tools
+  * App lock with PIN and fingerprint, and Hide in screenshots / Hide in recent apps
+
+  Permissions: biometrics (only for fingerprint unlock). No internet or any other permission. Needs Android 13 or newer on a 64-bit ARM phone.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google libraries, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. SumCtrl has no internet permission at all, so it never connects to anything.
+
+  Open source and built in the open: SumCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- a8e6376f461c9929fcafa030014aa8de63360236b97e5505de4078989054a809

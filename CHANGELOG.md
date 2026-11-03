@@ -4,6 +4,10 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ## 2026-11-03
 
+### New
+
+- **SumCtrl** is in the repo: an offline calculator, unit converter and work-tools app that replaces your phone's calculator. Version 0.1.0 has exact decimal maths with a live result, shop-style percentages, scientific keys, history, a unit converter with 13 categories, and VAT, discount, margin, instalment and percentage tools. It has no internet permission, and it's pinned to its own release signing key (a8e6376f…54a809). The README's app list includes it.
+
 ### Changed
 
 - **The Matrix chat app is now ChatCtrl.** It's in the repo as a new app, with its own app ID (`com.vknxworks.chatctrl`) and its own release signing key (9ee0fc5f…929aba), pinned like every other app. If you used the chat app before, install **ChatCtrl**, sign in again and verify the new session with your recovery key; the earlier install no longer gets updates from this repo.
