@@ -1,0 +1,36 @@
+Categories:
+- Time
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/DateCtrl
+SourceCode: https://github.com/VoidedKN0X/DateCtrl
+IssueTracker: https://github.com/VoidedKN0X/DateCtrl/issues
+Changelog: https://github.com/VoidedKN0X/DateCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: DateCtrl
+Summary: Private, offline calendar that replaces your phone's calendar app
+Description: |
+  A calendar app for the events in your phone's calendar storage: calendars on the phone itself and from your accounts (DAVx⁵, Exchange and others that sync through their own apps). It keeps no copy of your events of its own, so your accounts keep syncing as before.
+
+  * Month view with a dot per event under each day, swipe between months, Today, optional week numbers, and the chosen day's events below
+  * Agenda with upcoming events day by day and search by title or place, three months ahead and more on request
+  * Events with title, all-day or start and end time, repeat (daily, weekly, monthly, yearly; other repeats from other apps are kept), calendar, place, description and several reminders
+  * Change or delete one occurrence of a repeating event or the whole series
+  * Event details with time, calendar, repeat, place (opens in your maps app), description, reminders and the guest list with replies
+  * Reminders as notifications with Snooze (10 minutes) and Dismiss
+  * Show or hide each calendar, grouped by account; add, rename, recolour and delete calendars on this phone
+  * "Add to calendar" buttons, event links and "open this day" from widgets and other apps open DateCtrl
+  * App lock with PIN and fingerprint, and Hide in screenshots / Hide in recent apps
+
+  Permissions: calendar (reading, and saving the changes you make), notifications (reminders) and biometrics (only for fingerprint unlock). No internet, location, contacts, storage, microphone or camera permission. Needs Android 13 or newer on a 64-bit ARM phone.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google libraries, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. DateCtrl has no internet permission at all, so it never connects to anything.
+
+  Open source and built in the open: DateCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 49fe026b1411a8e42a75b2e871a93ed654c6141ce7a78b341ae62f51624d5c07

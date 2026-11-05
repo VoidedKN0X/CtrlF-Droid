@@ -1,0 +1,38 @@
+Categories:
+- Phone & SMS
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/CallCtrl
+SourceCode: https://github.com/VoidedKN0X/CallCtrl
+IssueTracker: https://github.com/VoidedKN0X/CallCtrl/issues
+Changelog: https://github.com/VoidedKN0X/CallCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: CallCtrl
+Summary: Private, offline phone app that replaces your dialer and call screen
+Description: |
+  A full phone app that replaces your phone's dialer and call screen: a keypad with contact search, your call history, your contacts with a number, and the screen for incoming and ongoing calls. Calls still go through your phone's own telephony, so your SIM, carrier features and emergency calls work exactly as before.
+
+  * Call screen for incoming, outgoing and waiting calls, also on the lock screen: answer, decline, decline with a text message, mute, keypad tones, speaker, headset and Bluetooth, hold, add a call, swap and merge into a conference
+  * Keypad with letters, tones and vibration you can turn off, searching your contacts by name or number as you type. Long-press 0 for +, long-press 1 for voicemail, and the call button brings back the last number you called
+  * Recents with calls in a row grouped, missed calls in red and a Missed filter; tap a call to call back, message, add to or open in contacts, copy, block or delete
+  * Contacts with a phone number, favourites on top, search, and a choice of number for contacts with several
+  * Missed call notifications with Call back and Message
+  * Blocked numbers: block and unblock numbers from Recents or Settings, using your phone's own block list for calls and texts
+  * Two SIMs: choose the SIM for each call when there's no default, and see which SIM a call is on
+  * The screen turns off at your ear, and an ongoing call keeps a notification with hang up while you use other apps
+  * Phone number links and "Call" buttons in other apps open CallCtrl's keypad with the number filled in
+  * App lock with PIN and fingerprint (incoming calls can always be answered), and Hide in screenshots / Hide in recent apps
+  * Works on any Android ROM as a normal app, without root
+
+  Permissions: phone (making calls and seeing your SIMs), call log (showing your history and deleting calls you choose), contacts (names, photos and search), notifications and full-screen alerts (the call screen and missed calls), keep awake (turning the screen off at your ear) and biometrics (only for fingerprint unlock). No internet permission. Needs Android 13 or newer on a 64-bit ARM phone.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google libraries, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. CallCtrl has no internet permission at all, so it never connects to anything.
+
+  Open source and built in the open: CallCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 8098044555fd7f3811bb9de739acac33778d22b2dab3c35d9d5e8cb968c51c13

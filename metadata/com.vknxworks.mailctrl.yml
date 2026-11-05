@@ -1,0 +1,42 @@
+Categories:
+- Internet
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/MailCtrl
+SourceCode: https://github.com/VoidedKN0X/MailCtrl
+IssueTracker: https://github.com/VoidedKN0X/MailCtrl/issues
+Changelog: https://github.com/VoidedKN0X/MailCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: MailCtrl
+Summary: Private, Google-free email for Gmail, Proton Mail and any IMAP account
+Description: |
+  An email app in the spirit of Thunderbird: several accounts, folders, search and attachments, talking straight to your own mail servers over IMAP and SMTP. No MailCtrl server sits in between.
+
+  * Several accounts, each with its own name, signature and notifications, and a combined inbox
+  * All your folders with unread counts; Sent, Drafts, Archive, Junk and Trash are found by themselves
+  * Read mail safely: HTML messages without scripts, and pictures from the internet blocked until you tap Load
+  * Write, reply, reply all and forward, with Cc and Bcc, attachments from any app, and the original attachments when forwarding
+  * Drafts kept on the phone, encrypted
+  * Open, share or save attachments
+  * Archive, delete, flag, mark read or unread and move messages, several at once with a long press
+  * Swipe actions you choose, with Undo for archive and delete
+  * Search on the server, in the inbox, Sent, Archive or every folder
+  * New-mail notifications with Mark as read and Delete, checked in the background, and instantly through ntfy (UnifiedPush) if you set it up
+  * Any IMAP provider: Gmail and other known addresses only need an app password; anything else takes a server address
+  * Proton Mail through hydroxide or Proton Mail Bridge on your own server
+  * Self-signed certificates you choose to trust, matched by their exact fingerprint
+  * mailto: links and Share to MailCtrl from any app
+  * App lock with PIN and fingerprint, and Hide in screenshots / Hide in recent apps
+
+  Permissions: internet (your mail servers), network state, notifications (new mail), run at startup and keep awake (background mail checks), ignore battery optimisations (only asked when you tap the Battery row) and biometrics (only for fingerprint unlock). No contacts, location, camera, microphone, storage or phone permission. Needs a mail account with IMAP and SMTP access, and Android 13 or newer on a 64-bit ARM phone.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google (apart from Gmail's own mail servers, if you add a Gmail account). It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. MailCtrl only connects to your own mail servers (IMAP and SMTP), and to your own ntfy address when you send a test wake-up. There's no MailCtrl server and no online look-up of server settings.
+
+  Open source and built in the open: MailCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- e80fb689519344e1dbc9675555e4926d8f781ad9cc480cb925835b4df49f5065

@@ -1,0 +1,34 @@
+Categories:
+- Multimedia
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/RecorderCtrl
+SourceCode: https://github.com/VoidedKN0X/RecorderCtrl
+IssueTracker: https://github.com/VoidedKN0X/RecorderCtrl/issues
+Changelog: https://github.com/VoidedKN0X/RecorderCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: RecorderCtrl
+Summary: Private, offline voice recorder that replaces your phone's recorder
+Description: |
+  A voice recorder for voice notes, talks and music, with a live level meter. It keeps going with the screen off, and keeps every recording in its own private storage until you share it or save a copy.
+
+  * Recording with a timer and live level meter, Pause and Resume, Stop and save, and Discard, also with the screen off or in another app, with Pause and Stop in the notification
+  * Quality: Standard and High (AAC .m4a) or Small (Opus .ogg), mono or stereo, and the microphone tuned for normal sound, voice (less noise and echo) or unprocessed for music
+  * Recordings list with name, date, length and size, search, and a player with seeking and 0.75× to 2× speed
+  * Private by default: recordings are stored in RecorderCtrl's own storage, which other apps can't read. Share one, or save a copy to the phone's Recordings folder, when you want to
+  * Recovers cut-off recordings when the phone was switched off or the app was stopped while recording, where the file can still be read
+  * Apps that ask for a voice recording get it from RecorderCtrl, with access to that one file only
+  * App lock with PIN and fingerprint, and Hide in screenshots / Hide in recent apps
+
+  Permissions: microphone (only while you record), foreground service for the microphone (recording with the screen off or in another app), notifications (the Recording notification) and biometrics (only for fingerprint unlock). No internet or any other permission. Needs Android 13 or newer on a 64-bit ARM phone.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google libraries, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. RecorderCtrl has no internet permission at all, so it never connects to anything.
+
+  Open source and built in the open: RecorderCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 5c67ddaa1c0d005a7630836aa1f429a2d9b49da25f3dfcf53071eeda54ccb24f

@@ -1,0 +1,43 @@
+Categories:
+- Navigation
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/LijnCtrl
+SourceCode: https://github.com/VoidedKN0X/LijnCtrl
+IssueTracker: https://github.com/VoidedKN0X/LijnCtrl/issues
+Changelog: https://github.com/VoidedKN0X/LijnCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: LijnCtrl
+Summary: Live De Lijn bus and tram departures for your stops
+Description: |
+  Live departures for De Lijn buses and trams in Flanders, built on De Lijn's open data with your own free API key.
+
+  * Your saved stops and lines, each with its next departures, refreshing live every 30 seconds
+  * Next departures widget for your home screen, with live times, delays and cancellations
+  * Live times from the bus or tram's position, topped up with the timetable; cancelled trips are crossed out
+  * Line badges in De Lijn's own colours
+  * Stop pages with the next 30 departures, the lines that call there and today's disruptions and diversions, and the full timetable for today or the next six days
+  * Trip pages with every stop of a run, and line pages with both directions stop by stop
+  * Route planner from your location, a stop or an address, with every Belgian operator (trains included) and live delays, shown on a map; planned by Transitous once you turn it on
+  * Live buses and trams on the maps, with their line number and heading (needs De Lijn's free GTFS Realtime key)
+  * Go home / Go to work in one tap, also as launcher shortcuts, a departures board of every bus leaving near you, and line filters per stop
+  * Trip guidance with a notification that tells you when to leave, when your bus is coming and when to get off
+  * Alerts when your bus is a few minutes from your stop, and optionally when De Lijn reports a new disruption on your saved stops or lines
+  * Search for stops by name or the number on their sign, lines by number, every stop in a town, and (if you switch it on) addresses and places
+  * Nearby stops as a list or on an OpenStreetMap map
+  * Disruption messages in English, Dutch, French or German
+  * Rename saved stops and put them in your own order; minutes to go or clock times
+  * App lock with PIN and fingerprint (your API key stays encrypted with the PIN while locked), and Hide in screenshots / Hide in recent apps
+
+  Permissions: internet (De Lijn's API, OpenStreetMap map tiles and, if you turn it on, Transitous), network state, location (only while the app is open, for nearby stops and routes from your location), notifications (alerts and trip guidance), foreground service (keeping an alert or trip guidance running), run at startup and keep awake (widget refresh and disruption checks) and biometrics (only for fingerprint unlock). No background location, camera, microphone, contacts or storage permission. Needs a free De Lijn API key, and Android 13 or newer on a 64-bit ARM phone. Unofficial app, not made or endorsed by De Lijn.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps). Nearby uses Android's own location service.
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind, and no servers of its own. LijnCtrl only connects to De Lijn's API (api.delijn.be) with your own key, to OpenStreetMap for map tiles, and to Transitous (api.transitous.org) for route planning and address search only if you turn it on.
+
+  Open source and built in the open: LijnCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- fabac3f4a99515d9c2ff5c8b9ee54e8db2ad44ef8778d035cbe50ec933323e30

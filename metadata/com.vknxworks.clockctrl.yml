@@ -1,0 +1,35 @@
+Categories:
+- Time
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/ClockCtrl
+SourceCode: https://github.com/VoidedKN0X/ClockCtrl
+IssueTracker: https://github.com/VoidedKN0X/ClockCtrl/issues
+Changelog: https://github.com/VoidedKN0X/ClockCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: ClockCtrl
+Summary: Offline alarms, world clock, timers and stopwatch
+Description: |
+  A clock app that replaces your phone's own: alarms that ring reliably (also in Do Not Disturb and before the phone is unlocked after a restart), a world clock, several timers at once and a stopwatch with laps.
+
+  * Alarms that repeat on the days you pick or ring once, with a label, their own sound (or silent) and vibration; skip just the next ring of a repeating alarm, and see how long until each alarm rings
+  * Reliable ringing: Android's alarm clock scheduling, alarm volume through Do Not Disturb, over the lock screen, after a restart before you unlock, and set again after a time zone or clock change
+  * Ringing screen with Snooze and Dismiss, and the volume keys snooze. Snooze length, how long an alarm rings and gradually louder sound are in Settings; an alarm that goes quiet leaves a missed alarm notification
+  * World clock with your local time and date, the next alarm, and the cities you add with the difference to your time
+  * Timers: type a time or tap a preset, run several at once, pause, add a minute, reset and name them, with a live countdown in the notification
+  * Stopwatch with laps (fastest and slowest marked), kept running in a notification while you use other apps
+  * "Set alarm" and "Set timer" from other apps and assistants, and the alarm icon in the status bar opens ClockCtrl
+  * App lock with PIN and fingerprint (ringing alarms and timers can always be stopped), and Hide in screenshots / Hide in recent apps
+
+  Permissions: exact alarms, run at startup (to set your alarms again after a restart), notifications and full-screen alerts (timers, the stopwatch and the ringing alarm), foreground service (playing the alarm sound), vibration, keep awake (while an alarm or timer rings) and biometrics (only for fingerprint unlock). No internet, location, contacts, storage, microphone or phone permission. Needs Android 13 or newer on a 64-bit ARM phone.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google libraries, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. ClockCtrl has no internet permission at all, so it never connects to anything.
+
+  Open source and built in the open: ClockCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 3531cfcd260bcb9a5251baa3713de925350a7cca28adb511cb7b75cdaf3ede70

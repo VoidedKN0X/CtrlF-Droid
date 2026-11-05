@@ -4,7 +4,7 @@
 
 Add this repo to F-Droid, Droid-ify or Neo Store and get every Ctrl app with automatic updates.
 
-Every Ctrl app is **Google-free, de-Googled** and **telemetry-free**: no Google Play services, Firebase or other Google services, no analytics, no crash reporting, no usage stats. They work the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps), only talk to the servers you add, and apps with push notifications use ntfy.
+Every Ctrl app is **Google-free, de-Googled** and **telemetry-free**: no Google Play services, Firebase or other Google services, no analytics, no crash reporting, no usage stats. They work the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps). The apps for your own servers only talk to the servers you add (LijnCtrl talks to De Lijn's API with your own key), the offline apps (phone, texts, contacts, calendar, clock, recorder, calculator, vehicle log and TV remote) have no internet permission at all, and apps with push notifications use ntfy.
 
 👉 **[Add the repo](https://voidedkn0x.github.io/CtrlF-Droid/)** (open on your phone, or scan the QR code there)
 
@@ -32,21 +32,29 @@ F-Droid is an app store for free and open-source Android apps. You don't need a 
 | [AdCtrl](https://github.com/VoidedKN0X/AdCtrl) | Control your AdGuard Home DNS server |
 | [ArrCtrl](https://github.com/VoidedKN0X/ArrCtrl) | Radarr, Sonarr, Prowlarr, Bazarr, qBittorrent, autobrr and Cleanuparr in one app |
 | [BeamCtrl](https://github.com/VoidedKN0X/BeamCtrl) | TV remote for phones with an IR blaster |
+| [CallCtrl](https://github.com/VoidedKN0X/CallCtrl) | Offline phone app: dialer, call history and call screen |
 | [ChatCtrl](https://github.com/VoidedKN0X/ChatCtrl) | Matrix chat client for matrix.org and self-hosted Synapse |
+| [ClockCtrl](https://github.com/VoidedKN0X/ClockCtrl) | Offline alarms, world clock, timers and stopwatch |
+| [ContactCtrl](https://github.com/VoidedKN0X/ContactCtrl) | Offline contacts app for your phone and sync accounts |
 | [CraftyCtrl](https://github.com/VoidedKN0X/CraftyCtrl) | Manage Minecraft servers on Crafty Controller |
+| [DateCtrl](https://github.com/VoidedKN0X/DateCtrl) | Offline calendar for your phone and sync accounts |
 | [FilesCtrl](https://github.com/VoidedKN0X/FilesCtrl) | File manager with NFS, SMB, SFTP, FTP and WebDAV |
 | [FrigateCtrl](https://github.com/VoidedKN0X/FrigateCtrl) | Watch and review your Frigate NVR cameras |
 | [ImmichCtrl](https://github.com/VoidedKN0X/ImmichCtrl) | Photos and backup for your Immich server |
 | [JellyCtrl](https://github.com/VoidedKN0X/JellyCtrl) | Movies, shows, music and Live TV from Jellyfin |
+| [LijnCtrl](https://github.com/VoidedKN0X/LijnCtrl) | Live De Lijn bus and tram departures for your stops |
+| [MailCtrl](https://github.com/VoidedKN0X/MailCtrl) | Email for Gmail, Proton Mail and any IMAP account |
 | [MemoCtrl](https://github.com/VoidedKN0X/MemoCtrl) | Notes on your Memos server |
 | [NaviCtrl](https://github.com/VoidedKN0X/NaviCtrl) | Music player for Navidrome servers |
 | [PaperCtrl](https://github.com/VoidedKN0X/PaperCtrl) | Scan and browse documents on Paperless-ngx |
 | [PrintCtrl](https://github.com/VoidedKN0X/PrintCtrl) | Bambu Lab printers through Bambuddy, and Spoolman spools |
 | [ProxCtrl](https://github.com/VoidedKN0X/ProxCtrl) | Manage your Proxmox VE server |
+| [RecorderCtrl](https://github.com/VoidedKN0X/RecorderCtrl) | Offline voice recorder with private storage |
 | [RideCtrl](https://github.com/VoidedKN0X/RideCtrl) | Offline maintenance, fuel and mod log for your vehicles |
 | [SeerrCtrl](https://github.com/VoidedKN0X/SeerrCtrl) | Request movies and shows on Seerr / Jellyseerr |
 | [SumCtrl](https://github.com/VoidedKN0X/SumCtrl) | Offline calculator, unit converter and work tools |
 | [SynapseCtrl](https://github.com/VoidedKN0X/SynapseCtrl) | Administer your Matrix Synapse server |
+| [TextCtrl](https://github.com/VoidedKN0X/TextCtrl) | Texts and picture messages (SMS and MMS), with no internet |
 | [TrueCtrl](https://github.com/VoidedKN0X/TrueCtrl) | Monitor and manage your TrueNAS server |
 | [WrtCtrl](https://github.com/VoidedKN0X/WrtCtrl) | Manage your OpenWrt router |
 
@@ -57,7 +65,7 @@ Every 3 hours (and on every push), a GitHub Actions workflow:
 1. Downloads the latest release APK of each app listed in [`apps.txt`](apps.txt), and turns its release notes into the app's "What's new".
 2. Checks every APK before it goes in: its package must belong to the repo it came from, and its signature must verify with Google's `apksigner` and come from that app's own release key (pinned in `AllowedAPKSigningKeys`). A built-in self-test checks that forged APKs are rejected. If any check fails, nothing is published and the current repo stays live.
 3. Runs `fdroid update` from the official [F-Droid tools](https://gitlab.com/fdroid/fdroidserver) to build and sign the repo index.
-4. Publishes the repo and the landing page to GitHub Pages.
+4. Publishes the repo and the landing page to GitHub Pages. The landing page lists every app in the signed index, with the number of apps next to the Apps heading.
 
 The APKs are the same signed builds as on each app's Releases page.
 

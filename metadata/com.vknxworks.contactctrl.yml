@@ -1,0 +1,38 @@
+Categories:
+- Phone & SMS
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/ContactCtrl
+SourceCode: https://github.com/VoidedKN0X/ContactCtrl
+IssueTracker: https://github.com/VoidedKN0X/ContactCtrl/issues
+Changelog: https://github.com/VoidedKN0X/ContactCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: ContactCtrl
+Summary: Private, offline contacts app that replaces your phone's own
+Description: |
+  A contacts app that shows, searches, adds and edits the contacts on your phone and in your accounts (the phone itself, DAVx⁵, Exchange and others), imports and exports .vcf files, and gives other apps the contact pickers they expect. It keeps no copy of your contacts of its own.
+
+  * Fast search over names, nicknames, phone numbers (any part, with or without the country code) and email addresses; accents don't matter
+  * Alphabetical list with letter headers and favourites on top; first or last name first, sorted by first or last name
+  * Contact page with one-tap call, message and email, every number, email, address, website, date and note; long-press anything to copy it
+  * Add and edit names, phone numbers, emails and addresses with their labels, company and job title, birthdays and other dates, websites, notes and a photo
+  * Safe with every account: only what changed is written, and only to accounts that sync changes back. Contacts from messengers like WhatsApp or Signal are shown but never changed
+  * Choose where new contacts go: this phone only, or a sync account like DAVx⁵
+  * Favourites tab, a ringtone per contact, and sharing a contact as a .vcf file
+  * Select several contacts to share, favourite or delete them at once
+  * Import and export .vcf files (vCard 2.1, 3.0 and 4.0, photos included), with duplicates skipped on import
+  * "Add to contacts", "edit contact" and the contact, phone number, email and address pickers for other apps; the app that asked gets only what you tap
+  * App lock with PIN and fingerprint, and Hide in screenshots / Hide in recent apps
+
+  Permissions: contacts (reading, and changing them when you ask), call phone numbers directly (optional, so tapping a number calls it) and biometrics (only for fingerprint unlock). No internet, location, storage, microphone or camera permission. Needs Android 13 or newer on a 64-bit ARM phone.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google libraries, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. ContactCtrl has no internet permission at all, so it never connects to anything.
+
+  Open source and built in the open: ContactCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- b530d1034250cc75e11d139c263b95c813131f4a8e6d56f04d5cfe808b29b955
