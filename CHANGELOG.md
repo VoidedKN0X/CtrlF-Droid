@@ -4,6 +4,10 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ## 2026-11-05
 
+### Fixed
+
+- **The repo updates again after the GitHub security settings were tightened.** The repo now only lets GitHub Actions run when every action is pinned to an exact commit. The step that publishes the website used an older Pages action that pulled in another action by version name instead, so every update stopped before it started. It now uses the current Pages actions (upload-pages-artifact 5.0.0 and deploy-pages 5.0.1), which are pinned all the way down. Nothing changes in the repo or on the website.
+
 ### New
 
 - **CallCtrl** is in the repo: an offline phone app that replaces your phone's dialer and call screen. Version 0.1.1 has the call screen (answer, decline with a text, mute, speaker and Bluetooth, hold, swap and conference calls), a keypad that searches your contacts as you type, Recents with a Missed filter, contacts with a number, missed call notifications, blocked numbers and two-SIM support. Calls still go through your phone's own telephony. It has no internet permission, and it's pinned to its own release signing key (80980445…c51c13).
