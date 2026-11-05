@@ -115,6 +115,8 @@ page = f"""<!doctype html>
   .card:hover {{ border-color:var(--accent); }}
   .card img, .ph {{ border-radius:14px; flex:none; }}
   .ph {{ width:56px; height:56px; display:grid; place-items:center; background:var(--accent); color:var(--accent-fg); font-weight:700; font-size:1.4rem; }}
+  h2.apps {{ display:flex; align-items:center; gap:10px; }}
+  h2.apps .count {{ background:var(--accent); color:var(--accent-fg); font-size:.85rem; font-weight:600; padding:2px 10px; border-radius:999px; }}
   .card h3 {{ margin:0; font-size:1rem; }}
   .card h3 span {{ font-weight:400; color:var(--muted); font-size:.85rem; }}
   .card p {{ margin:2px 0 0; color:var(--muted); font-size:.9rem; }}
@@ -160,7 +162,7 @@ page = f"""<!doctype html>
     </ul>
   </section>
 
-  <h2>Apps</h2>
+  <h2 class="apps">Apps <span class="count">{len(cards)}</span></h2>
   <div class="grid">{''.join(cards)}
   </div>
 

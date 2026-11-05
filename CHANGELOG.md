@@ -2,6 +2,12 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-11-05
+
+### Changed
+
+- **The landing page shows how many apps are in the repo.** The Apps heading has a badge with the number of apps, counted from the repo's signed index each time the page is rebuilt, so it's always the real number.
+
 ## 2026-11-03
 
 ### New
