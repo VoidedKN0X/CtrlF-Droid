@@ -4,6 +4,10 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ## 2026-11-05
 
+### Project
+
+- **The workflows are audited.** A new check runs [zizmor](https://docs.zizmor.sh) on every workflow change, offline, with zizmor pinned by its PyPI hashes. Both workflows already start with no permissions and give each job only what it needs; the permissions now say why each one is there. Nothing changes in the repo or on the website.
+
 ### Fixed
 
 - **The repo updates again after the GitHub security settings were tightened.** The repo now only lets GitHub Actions run when every action is pinned to an exact commit. The step that publishes the website used an older Pages action that pulled in another action by version name instead, so every update stopped before it started. It now uses the current Pages actions (upload-pages-artifact 5.0.0 and deploy-pages 5.0.1), which are pinned all the way down. Nothing changes in the repo or on the website.
