@@ -24,7 +24,7 @@ Description: |
   * Device list, and app lock with its own PIN and optional fingerprint
   * Two-pane layout on tablets and foldables
 
-  Needs a server with Simplified Sliding Sync (Synapse 1.114 or newer, Conduit, Conduwuit or Tuwunel), and Android 13 or newer on a 64-bit ARM phone.
+  Needs a server with Simplified Sliding Sync (Synapse 1.114 or newer, Conduit, Conduwuit or Tuwunel), and Android 15 or newer on a 64-bit ARM phone.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 

@@ -24,7 +24,7 @@ Description: |
   * App lock with its own PIN and optional fingerprint unlock
   * Client certificates (mutual TLS), several servers and accounts
 
-  Works with Memos 0.21 or 0.27 to 0.31, or without a server. Needs Android 13 or newer on a 64-bit ARM phone.
+  Works with Memos 0.21 or 0.27 to 0.31, or without a server. Needs Android 15 or newer on a 64-bit ARM phone.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 

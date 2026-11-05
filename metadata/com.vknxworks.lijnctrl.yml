@@ -29,7 +29,7 @@ Description: |
   * Rename saved stops and put them in your own order; minutes to go or clock times
   * App lock with PIN and fingerprint (your API key stays encrypted with the PIN while locked), and Hide in screenshots / Hide in recent apps
 
-  Permissions: internet (De Lijn's API, OpenStreetMap map tiles and, if you turn it on, Transitous), network state, location (only while the app is open, for nearby stops and routes from your location), notifications (alerts and trip guidance), foreground service (keeping an alert or trip guidance running), run at startup and keep awake (widget refresh and disruption checks) and biometrics (only for fingerprint unlock). No background location, camera, microphone, contacts or storage permission. Needs a free De Lijn API key, and Android 13 or newer on a 64-bit ARM phone. Unofficial app, not made or endorsed by De Lijn.
+  Permissions: internet (De Lijn's API, OpenStreetMap map tiles and, if you turn it on, Transitous), network state, location (only while the app is open, for nearby stops and routes from your location), notifications (alerts and trip guidance), foreground service (keeping an alert or trip guidance running), run at startup and keep awake (widget refresh and disruption checks) and biometrics (only for fingerprint unlock). No background location, camera, microphone, contacts or storage permission. Needs a free De Lijn API key, and Android 15 or newer on a 64-bit ARM phone. Unofficial app, not made or endorsed by De Lijn.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps). Nearby uses Android's own location service.
 

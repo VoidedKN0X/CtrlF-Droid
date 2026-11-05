@@ -24,7 +24,7 @@ Description: |
   * Crash, stop and player join/leave alerts, with optional instant push from Crafty through ntfy
   * App lock with its own PIN and fingerprint, and switches to hide the app from screenshots and recent apps
 
-  Needs Crafty Controller 4.x over HTTPS with a certificate Android trusts (plain HTTP only for your own panel, after a warning), and Android 13 or newer on a 64-bit ARM phone. Unofficial app, not affiliated with the Crafty Controller team.
+  Needs Crafty Controller 4.x over HTTPS with a certificate Android trusts (plain HTTP only for your own panel, after a warning), and Android 15 or newer on a 64-bit ARM phone. Unofficial app, not affiliated with the Crafty Controller team.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 

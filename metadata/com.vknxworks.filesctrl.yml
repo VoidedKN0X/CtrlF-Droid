@@ -25,7 +25,7 @@ Description: |
   * Read-only servers and fingerprint-checked connections
   * Encrypted passwords and app lock with PIN and fingerprint; dark and light themes that follow your phone
 
-  Needs Android 13 or newer on a 64-bit ARM phone. No root needed; all files access is only for your phone's own storage.
+  Needs Android 15 or newer on a 64-bit ARM phone. No root needed; all files access is only for your phone's own storage.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 

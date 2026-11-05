@@ -26,6 +26,7 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ### Changed
 
+- **Every app now needs Android 15 or newer.** Android 13 no longer gets security updates and Android 14's updates end in early 2027, so the Ctrl apps now support Android 15, 16 and 17 only. Each app's description in your F-Droid client says so. On an older phone the version you have keeps working, but your store won't offer it updates.
 - **The landing page shows how many apps are in the repo.** The Apps heading has a badge with the number of apps, counted from the repo's signed index each time the page is rebuilt, so it's always the real number.
 - **The repo's description** in your F-Droid client now mentions email, live De Lijn departures and the offline apps that replace your phone's dialer, texts, contacts, calendar, clock, recorder and calculator, not just apps for self-hosted servers.
 - **The landing page and README say what each kind of app connects to:** apps for your own servers only talk to the servers you add (LijnCtrl to De Lijn's API), and the offline apps have no internet permission at all. The README also describes the app count on the landing page.

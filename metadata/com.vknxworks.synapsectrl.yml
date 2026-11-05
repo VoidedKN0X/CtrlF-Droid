@@ -24,7 +24,7 @@ Description: |
   * Works with Synapse's LAN address, so the admin API can stay off the internet
   * Several servers, read-only mode, typed confirmation for anything that can't be undone, app lock with its own PIN and fingerprint, certificate pinning and screenshot protection
 
-  Needs a Synapse server with a server admin account, and Android 13 or newer on a 64-bit ARM phone.
+  Needs a Synapse server with a server admin account, and Android 15 or newer on a 64-bit ARM phone.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 

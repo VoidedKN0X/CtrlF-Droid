@@ -32,7 +32,7 @@ Description: |
   * Your own bubble colour and text size, a recent chats widget, and chat list and chat side by side on tablets and foldables
   * App lock with PIN and fingerprint (drafts stay encrypted while locked), and Hide in screenshots / Hide in recent apps
 
-  Permissions: send, receive and read texts and receive picture messages (granted when you make TextCtrl your SMS app), contacts (optional, names and pictures), phone (optional, your SIMs and your own numbers), notifications, exact alarms and run at startup (scheduled messages and auto-delete) and biometrics (only for fingerprint unlock). No internet or network permission. Needs Android 13 or newer on a 64-bit ARM phone.
+  Permissions: send, receive and read texts and receive picture messages (granted when you make TextCtrl your SMS app), contacts (optional, names and pictures), phone (optional, your SIMs and your own numbers), notifications, exact alarms and run at startup (scheduled messages and auto-delete) and biometrics (only for fingerprint unlock). No internet or network permission. Needs Android 15 or newer on a 64-bit ARM phone.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google libraries, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 

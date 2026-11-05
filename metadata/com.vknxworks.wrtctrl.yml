@@ -22,7 +22,7 @@ Description: |
   * Home screen widget, a guest Wi-Fi Quick Settings tile and app shortcuts
   * Several routers, a dedicated least-privilege login (see the README), read-only mode, app lock with its own PIN and optional fingerprint, certificate pinning and screenshot protection
 
-  Needs OpenWrt with LuCI (uhttpd, rpcd and luci-base), and Android 13 or newer on a 64-bit ARM phone. Unofficial app, not affiliated with the OpenWrt project.
+  Needs OpenWrt with LuCI (uhttpd, rpcd and luci-base), and Android 15 or newer on a 64-bit ARM phone. Unofficial app, not affiliated with the OpenWrt project.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 

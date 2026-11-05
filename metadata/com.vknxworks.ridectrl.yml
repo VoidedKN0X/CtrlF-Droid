@@ -25,7 +25,7 @@ Description: |
   * km or miles, litres or gallons, °C or °F and your currency
   * App lock with PIN and fingerprint; while locked, the widget and reminders don't show any details
 
-  Permissions: notifications (reminders), run at startup (to re-arm the daily check) and biometrics (only for fingerprint unlock). No internet, camera or storage permission. Needs Android 13 or newer on a 64-bit ARM phone.
+  Permissions: notifications (reminders), run at startup (to re-arm the daily check) and biometrics (only for fingerprint unlock). No internet, camera or storage permission. Needs Android 15 or newer on a 64-bit ARM phone.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google libraries, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 

@@ -23,7 +23,7 @@ Description: |
   * Decimal comma or point, thousands grouping and your currency for the tools
   * App lock with PIN and fingerprint, and Hide in screenshots / Hide in recent apps
 
-  Permissions: biometrics (only for fingerprint unlock). No internet or any other permission. Needs Android 13 or newer on a 64-bit ARM phone.
+  Permissions: biometrics (only for fingerprint unlock). No internet or any other permission. Needs Android 15 or newer on a 64-bit ARM phone.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google libraries, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 

@@ -28,7 +28,7 @@ Description: |
   * mailto: links and Share to MailCtrl from any app
   * App lock with PIN and fingerprint, and Hide in screenshots / Hide in recent apps
 
-  Permissions: internet (your mail servers), network state, notifications (new mail), run at startup and keep awake (background mail checks), ignore battery optimisations (only asked when you tap the Battery row) and biometrics (only for fingerprint unlock). No contacts, location, camera, microphone, storage or phone permission. Needs a mail account with IMAP and SMTP access, and Android 13 or newer on a 64-bit ARM phone.
+  Permissions: internet (your mail servers), network state, notifications (new mail), run at startup and keep awake (background mail checks), ignore battery optimisations (only asked when you tap the Battery row) and biometrics (only for fingerprint unlock). No contacts, location, camera, microphone, storage or phone permission. Needs a mail account with IMAP and SMTP access, and Android 15 or newer on a 64-bit ARM phone.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google (apart from Gmail's own mail servers, if you add a Gmail account). It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 

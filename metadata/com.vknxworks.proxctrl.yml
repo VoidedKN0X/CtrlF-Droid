@@ -25,7 +25,7 @@ Description: |
   * Several servers, API token or password with two-factor; the last state stays on screen when offline
   * Read-only mode, typed confirmations for dangerous actions, app lock with its own PIN and optional fingerprint, certificate pinning and screenshot protection
 
-  Needs Android 13 or newer on a 64-bit ARM phone. Unofficial app, not affiliated with Proxmox Server Solutions.
+  Needs Android 15 or newer on a 64-bit ARM phone. Unofficial app, not affiliated with Proxmox Server Solutions.
 
   Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
