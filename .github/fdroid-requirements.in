@@ -1,0 +1,4 @@
+# What the "Update F-Droid repo" job installs. The versions and sha256 hashes of these two and of
+# everything they need are locked in fdroid-requirements.txt; change a version here, then regenerate that file.
+fdroidserver==2.4.5
+qrcode==8.2

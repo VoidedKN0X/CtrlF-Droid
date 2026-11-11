@@ -2,6 +2,12 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-11-11
+
+### Security
+
+- **The tools that sign the repo are now pinned all the way down.** The job that builds and signs the repo index installs fdroidserver and qrcode with pip. Those two were already fixed to exact versions, but the 64 other packages they pull in were not, so pip took whatever version of each was newest at that moment, in the one job that holds the repo signing key. All 66 packages are now listed in `.github/fdroid-requirements.txt` with one exact version and PyPI's sha256 hashes, and pip installs with `--require-hashes`, which refuses any file that doesn't match. A tampered or hijacked release of one of those packages can no longer get into that job. `.github/fdroid-requirements.in` holds the two packages asked for; the lock file is regenerated from it when a version changes (the command is at the top of the lock file). Nothing changes in the repo or on the website.
+
 ## 2026-11-05
 
 ### Project

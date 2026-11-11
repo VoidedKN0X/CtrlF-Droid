@@ -31,8 +31,9 @@ jobs:
           python-version: "3.12"
 
       - name: Install F-Droid tools
-        # Pinned: this job holds the repo signing key.
-        run: pip install fdroidserver==2.4.5 qrcode==8.2
+        # This job holds the repo signing key: fdroidserver, qrcode and everything they need are pinned
+        # to exact versions with sha256 hashes, and pip refuses anything else.
+        run: pip install --require-hashes -r .github/fdroid-requirements.txt
 
       - name: Find apksigner
         # add_apk.py and `fdroid update` both verify APK signatures with this
