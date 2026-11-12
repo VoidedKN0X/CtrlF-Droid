@@ -2,6 +2,13 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-11-12
+
+### New
+
+- **LumenCtrl** is in the repo: a private, offline photo and video editor that works like a desktop raw editor, non-destructive and rendered live on the phone's GPU. Version 0.1.0 has light, curves, color, grading, effects, lens and detail tools, linear, radial and range masks, one-tap AI masks (subject, sky, people, skin, hair, clothes) and AI Denoise that run on the phone, heal and clone, crop, presets, HDR editing with Ultra HDR export and bracket merging, video looks and reels, and import straight from a camera over USB. It has no internet permission, and it's pinned to its own release signing key (fded53e2…47be81).
+- The README's app list includes it, so it now lists all 29 apps in the repo.
+
 ## 2026-11-11
 
 ### Security

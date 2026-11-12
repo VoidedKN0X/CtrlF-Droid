@@ -1,0 +1,39 @@
+Categories:
+- Graphics
+- Multimedia
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/LumenCtrl
+SourceCode: https://github.com/VoidedKN0X/LumenCtrl
+IssueTracker: https://github.com/VoidedKN0X/LumenCtrl/issues
+Changelog: https://github.com/VoidedKN0X/LumenCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: LumenCtrl
+Summary: Private, offline photo and video editor with on-device AI masks, AI Denoise and HDR
+Description: |
+  A photo and video editor that works the way desktop raw editors do: every change is non-destructive, the original is never touched, and the whole look is rendered live on the phone's GPU. AI masks, AI Denoise and HDR all run on the phone itself.
+
+  * Edit tools: light, curves, color with a white-balance eyedropper, a color mixer, color grading, effects (texture, clarity, dehaze, vignette, grain, glow), detail, lens corrections and lens blur, with a live histogram
+  * Masks: linear, radial, luminance and color range, each with its own local sliders
+  * Offline AI masks: select the subject, background, people, face or body skin, hair, clothes or sky with one tap
+  * Offline AI Denoise (Quality or Fast), blended in live with an Amount slider
+  * Heal and clone, crop with aspect locks, rotate, flip, auto-straighten and perspective
+  * Presets, copy and paste an edit onto other photos, undo and redo, a named history and saved versions
+  * HDR: edit and view in HDR, export Ultra HDR JPEGs that also look right on SDR screens, and merge 2 to 7 bracketed shots into one HDR photo
+  * Video: the same looks on videos, plus trim, mute, speed and reels from several clips
+  * Library with search, ratings, flags, albums, slideshow and collage; import from the Photo Picker, the camera, any app, or straight from a camera over USB
+  * Export to JPEG, PNG or WebP, with your location removed from the metadata by default, an optional watermark, and batch export
+  * App lock with fingerprint, face or your screen lock, and Hide in screenshots / Hide in recent apps
+
+  Permissions: biometrics (only for the app lock). No internet, storage, camera, location or photo-library permission: imports go through Android's Photo Picker or the app you share from, and exports are saved through Android's media store. Needs Android 15 or newer on a 64-bit ARM phone with OpenGL ES 3.0.
+
+  Google-free and de-Googled: no Google Play services, Firebase or Google SDKs, and the app never contacts Google. The AI models run on LiteRT, the open-source (Apache 2.0) on-device engine, which needs no Google software on the phone. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. LumenCtrl has no internet permission at all, so it never connects to anything. The AI models are bundled in the app, and no photo ever leaves the phone.
+
+  Open source and built in the open: LumenCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- fded53e214ddbad33bb354dd813799155d1926896ef1ab288cbd2ea33e47be81

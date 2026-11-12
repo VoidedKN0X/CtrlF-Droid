@@ -4,7 +4,7 @@
 
 Add this repo to F-Droid, Droid-ify or Neo Store and get every Ctrl app with automatic updates.
 
-Every Ctrl app is **Google-free, de-Googled** and **telemetry-free**: no Google Play services, Firebase or other Google services, no analytics, no crash reporting, no usage stats. They work the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps). The apps for your own servers only talk to the servers you add (LijnCtrl talks to De Lijn's API with your own key), the offline apps (phone, texts, contacts, calendar, clock, recorder, calculator, vehicle log and TV remote) have no internet permission at all, and apps with push notifications use ntfy.
+Every Ctrl app is **Google-free, de-Googled** and **telemetry-free**: no Google Play services, Firebase or other Google services, no analytics, no crash reporting, no usage stats. They work the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps). The apps for your own servers only talk to the servers you add (LijnCtrl talks to De Lijn's API with your own key), the offline apps (phone, texts, contacts, calendar, clock, recorder, calculator, photo and video editor, vehicle log and TV remote) have no internet permission at all, and apps with push notifications use ntfy.
 
 👉 **[Add the repo](https://voidedkn0x.github.io/CtrlF-Droid/)** (open on your phone, or scan the QR code there)
 
@@ -43,6 +43,7 @@ F-Droid is an app store for free and open-source Android apps. You don't need a 
 | [ImmichCtrl](https://github.com/VoidedKN0X/ImmichCtrl) | Photos and backup for your Immich server |
 | [JellyCtrl](https://github.com/VoidedKN0X/JellyCtrl) | Movies, shows, music and Live TV from Jellyfin |
 | [LijnCtrl](https://github.com/VoidedKN0X/LijnCtrl) | Live De Lijn bus and tram departures for your stops |
+| [LumenCtrl](https://github.com/VoidedKN0X/LumenCtrl) | Private, offline photo and video editor |
 | [MailCtrl](https://github.com/VoidedKN0X/MailCtrl) | Email for Gmail, Proton Mail and any IMAP account |
 | [MemoCtrl](https://github.com/VoidedKN0X/MemoCtrl) | Notes on your Memos server |
 | [NaviCtrl](https://github.com/VoidedKN0X/NaviCtrl) | Music player for Navidrome servers |

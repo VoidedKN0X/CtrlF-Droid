@@ -13,6 +13,7 @@ VoidedKN0X/FrigateCtrl
 VoidedKN0X/ImmichCtrl
 VoidedKN0X/JellyCtrl
 VoidedKN0X/LijnCtrl
+VoidedKN0X/LumenCtrl
 VoidedKN0X/MailCtrl
 VoidedKN0X/MemoCtrl
 VoidedKN0X/NaviCtrl
