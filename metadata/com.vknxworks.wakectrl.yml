@@ -1,0 +1,35 @@
+Categories:
+- System
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/WakeCtrl
+SourceCode: https://github.com/VoidedKN0X/WakeCtrl
+IssueTracker: https://github.com/VoidedKN0X/WakeCtrl/issues
+Changelog: https://github.com/VoidedKN0X/WakeCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: WakeCtrl
+Summary: Keep the screen awake per app, while charging or with a Bluetooth device
+Description: |
+  Keeps your phone's screen on when you want it to: by hand, for a set time, or automatically while chosen apps are open, while charging, or while a Bluetooth device is connected.
+
+  * Keep awake by hand, with an optional timer, from the app, a Quick Settings tile, a home-screen widget or a shortcut
+  * AppWake: stays on while the apps you pick are in front
+  * ChargeWake: stays on while charging, optionally only on a charger type
+  * BTWake: stays on while a chosen Bluetooth device is connected
+  * Optional brightness while held, and "Allow dimming"
+  * Stops itself on low battery (with an override), and reminds you after 3 hours
+  * Other apps (Tasker, Home Assistant) can turn it on or off, only if you allow it
+  * App lock with its own PIN and fingerprint, Hide in screenshots and Hide in recent apps
+
+  Permissions: wake lock and a foreground service (to keep the screen on), notifications, modify system settings (optional, for brightness), usage access (optional, for AppWake: only which app is in front), Bluetooth connect (optional, for BTWake), start at boot, battery optimisation exemption (optional), biometrics (app lock). No internet and no "Display over other apps". Needs Android 15 or newer on a 64-bit ARM phone.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. WakeCtrl has no internet permission at all.
+
+  Open source and built in the open: WakeCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- a017216d05e7511be3129f1a89628bb72c31f93fbf2ed2fedda47a0451a044a0

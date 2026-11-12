@@ -1,0 +1,34 @@
+Categories:
+- Connectivity
+- System
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/TapoCtrl
+SourceCode: https://github.com/VoidedKN0X/TapoCtrl
+IssueTracker: https://github.com/VoidedKN0X/TapoCtrl/issues
+Changelog: https://github.com/VoidedKN0X/TapoCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: TapoCtrl
+Summary: Control Tapo plugs and bulbs on your home network, without TP-Link's cloud
+Description: |
+  Controls TP-Link Tapo plugs and bulbs directly on your home network (KLAP), without TP-Link's cloud or app.
+
+  * Find devices on your Wi-Fi or add them by IP
+  * On/off, brightness, colour temperature and colour
+  * Energy use and cost for energy-monitoring plugs
+  * Rename, device info, and firmware updates that the device downloads itself
+  * Only changes a device when you tap its control: refreshing and discovery only read
+  * Your Tapo login is kept only as the two hashes the devices check, encrypted on the phone
+
+  Permissions: internet and network state, only for your home network (TapoCtrl refuses any address outside it), biometrics (app lock). Needs Android 15 or newer on a 64-bit ARM phone.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. TapoCtrl never contacts TP-Link.
+
+  Open source and built in the open: TapoCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- bd5698b5ede90c999460bf0aa2c79a6e6308b5e765c7bc0656c490a705bfebe8

@@ -7,7 +7,8 @@ repo_description: >-
   services like Jellyfin, Immich, Navidrome, Frigate, Seerr, Matrix, Paperless-ngx,
   Proxmox VE, TrueNAS, the *arr apps, Bambuddy and Spoolman, plus email, live De Lijn
   departures and offline replacements for your phone's dialer, texts, contacts,
-  calendar, clock, recorder and calculator, and a private photo and video editor.
+  calendar, clock, recorder, calculator, gallery, camera, home screen and maps, a private
+  photo and video editor, and local control for Tapo, Canon, Cardo and JBL devices.
   Updated automatically from each app's GitHub releases.
 
 archive_older: 0

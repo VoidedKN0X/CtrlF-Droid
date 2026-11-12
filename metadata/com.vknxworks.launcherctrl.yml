@@ -1,0 +1,35 @@
+Categories:
+- Theming
+- System
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/LauncherCtrl
+SourceCode: https://github.com/VoidedKN0X/LauncherCtrl
+IssueTracker: https://github.com/VoidedKN0X/LauncherCtrl/issues
+Changelog: https://github.com/VoidedKN0X/LauncherCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: LauncherCtrl
+Summary: Minimal, private home screen with hidden apps, widgets and smooth animations
+Description: |
+  A minimal home screen in the Ctrl design, with smooth, physical animations, inspired by the Pixel and Lawnchair launchers.
+
+  * Home pages with apps, folders and widgets, a dock and a clock-and-date glance
+  * App drawer as a vertical list or horizontal pages, with search
+  * Hide apps from the drawer and search; hidden apps have their own page, optionally behind your app PIN
+  * Themed (monochrome) icons, notification dots, swipe down for notifications
+  * Your wallpaper shows through, with parallax across pages
+  * Work profile and private space apps in their own section
+  * App lock for Settings and hidden apps (the home screen itself always opens)
+
+  Permissions: expand the status bar (swipe down for notifications), request app uninstalls, biometrics (app lock). No internet, no accessibility service. Needs Android 15 or newer on a 64-bit ARM phone.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. LauncherCtrl has no internet permission and no web search.
+
+  Open source and built in the open: LauncherCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 14c0bfa853c75fc6d8e583ed6daf86afcc56d3d0dd7bbce169918d0608351519

@@ -2,6 +2,22 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-11-12 (later)
+
+### New
+
+- **Nine new apps** in the repo, each pinned to its own release signing key:
+  - **CameraCtrl:** a private camera that saves RAW (DNG) on every lens your phone lets apps use, with pro controls and 4K video. No internet or location permission.
+  - **GalleryCtrl:** a private, offline gallery with an encrypted vault and no trash bin.
+  - **LauncherCtrl:** a minimal, private home screen with hidden apps, widgets and a list or paged app drawer.
+  - **MapsCtrl:** private, offline maps and turn-by-turn navigation on the Organic Maps engine, without any Google or microG location library.
+  - **ShutterCtrl:** a Wi-Fi remote and photo transfer for Canon cameras, with live view, an intervalometer and firmware transfer.
+  - **SoundCtrl:** JBL headphones and speakers without the Harman account, including firmware updates for supported models.
+  - **TalkCtrl:** Cardo intercom settings, FM radio, intercom and firmware updates, without the Cardo account.
+  - **TapoCtrl:** Tapo plugs and bulbs on your home network, without TP-Link's cloud.
+  - **WakeCtrl:** keeps the screen awake by hand, per app, while charging or with a Bluetooth device. No internet permission.
+- The README lists all 38 apps, and the store icons are also rendered for MapsCtrl, which keeps its Android app under `android/`.
+
 ## 2026-11-12
 
 ### New

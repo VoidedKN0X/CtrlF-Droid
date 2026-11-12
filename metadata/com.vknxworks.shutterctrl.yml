@@ -1,0 +1,32 @@
+Categories:
+- Multimedia
+- Connectivity
+License: GPL-3.0-only
+AuthorName: VKNXWorks
+WebSite: https://github.com/VoidedKN0X/ShutterCtrl
+SourceCode: https://github.com/VoidedKN0X/ShutterCtrl
+IssueTracker: https://github.com/VoidedKN0X/ShutterCtrl/issues
+Changelog: https://github.com/VoidedKN0X/ShutterCtrl/releases
+Donate: https://github.com/sponsors/VoidedKN0X
+Name: ShutterCtrl
+Summary: Private Wi-Fi remote and photo transfer for Canon cameras
+Description: |
+  Connects to Canon cameras over Wi-Fi (PTP/IP), on the camera's own network or your home Wi-Fi, without a Canon account.
+
+  * Browse the card with thumbnails and download JPEG and RAW
+  * Remote shutter and live view with aperture, shutter speed, ISO and exposure compensation
+  * Intervalometer
+  * Camera firmware transfer from a .FIR file you download from Canon
+
+  Permissions: internet and network state (only to the camera on your local network), Wi-Fi multicast (to find the camera), a foreground service and notifications (intervalometer), biometrics (app lock). No location and no Bluetooth. Needs Android 15 or newer on a 64-bit ARM phone.
+
+  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. ShutterCtrl never contacts Canon.
+
+  Open source and built in the open: ShutterCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
+
+# SHA-256 of the release signing certificate. APKs signed by any other key are
+# rejected and nothing is published (scripts/add_apk.py and fdroid update).
+AllowedAPKSigningKeys:
+- 15bf24a2cfa9b82dbef2a55716c24c166d71472361615828d4186a2db7d66990
