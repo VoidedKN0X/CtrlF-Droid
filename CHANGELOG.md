@@ -2,6 +2,13 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-11-13
+
+### Changed
+
+- **MapsCtrl** is rebuilt from scratch as its own app: OpenStreetMap maps drawn with Mapsforge in MapsCtrl's own style, and offline routing with BRouter. Its listing now says GPL-3.0 and describes the new app. Version 0.3.0 installs as an update; maps from earlier versions need to be downloaded again.
+- Store icons for every app are read from the usual `app/` folder again; the special case for MapsCtrl's old layout is gone.
+
 ## 2026-11-12 (later)
 
 ### New
@@ -10,13 +17,13 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
   - **CameraCtrl:** a private camera that saves RAW (DNG) on every lens your phone lets apps use, with pro controls and 4K video. No internet or location permission.
   - **GalleryCtrl:** a private, offline gallery with an encrypted vault and no trash bin.
   - **LauncherCtrl:** a minimal, private home screen with hidden apps, widgets and a list or paged app drawer.
-  - **MapsCtrl:** private, offline maps and turn-by-turn navigation on the Organic Maps engine, without any Google or microG location library.
+  - **MapsCtrl:** private, offline maps and turn-by-turn navigation, without any Google or microG location library.
   - **ShutterCtrl:** a Wi-Fi remote and photo transfer for Canon cameras, with live view, an intervalometer and firmware transfer.
   - **SoundCtrl:** JBL headphones and speakers without the Harman account, including firmware updates for supported models.
   - **TalkCtrl:** Cardo intercom settings, FM radio, intercom and firmware updates, without the Cardo account.
   - **TapoCtrl:** Tapo plugs and bulbs on your home network, without TP-Link's cloud.
   - **WakeCtrl:** keeps the screen awake by hand, per app, while charging or with a Bluetooth device. No internet permission.
-- The README lists all 38 apps, and the store icons are also rendered for MapsCtrl, which keeps its Android app under `android/`.
+- The README lists all 38 apps.
 
 ## 2026-11-12
 

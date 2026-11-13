@@ -1,6 +1,6 @@
 Categories:
 - Navigation
-License: Apache-2.0
+License: GPL-3.0-only
 AuthorName: VKNXWorks
 WebSite: https://github.com/VoidedKN0X/MapsCtrl
 SourceCode: https://github.com/VoidedKN0X/MapsCtrl
@@ -10,23 +10,22 @@ Donate: https://github.com/sponsors/VoidedKN0X
 Name: MapsCtrl
 Summary: Private, offline maps and turn-by-turn navigation
 Description: |
-  Maps and navigation that work offline: download the maps you need once, and search, routing and navigation run on your phone. Built on the open-source Organic Maps engine with OpenStreetMap data.
+  Maps and navigation that work offline: download the maps you need once, and search, routing and navigation run on your phone. MapsCtrl has its own map style and uses OpenStreetMap data, drawn with Mapsforge and routed with BRouter.
 
-  * Offline maps of every country and region
-  * Turn-by-turn navigation for car, walking, cycling and public transport, with voice, lanes and speed limits
-  * Speed camera warnings
-  * Offline search, bookmarks and tracks (KML, KMZ, GPX)
-  * Hiking and cycling maps with contour lines and hillshading
-  * Android Auto
+  * Offline vector maps of any country or region, in MapsCtrl's own day and night style
+  * Offline search by name, address, category and coordinates
+  * Routes by car, bike and on foot, worked out on the phone
+  * Turn-by-turn navigation with spoken directions, speed limits, speed camera warnings and rerouting
+  * Saved places, track recording, GPX import and export
+  * Optional ETA sharing through your own ntfy server (off by default; never your position)
 
-  Permissions: location (only on the phone, never sent anywhere), internet and network state (only to download maps), a foreground service and notifications (navigation and downloads), start at boot. Needs Android 15 or newer on a 64-bit ARM phone.
+  Permissions: location (only on the phone, never sent anywhere), internet (only to download the maps, search data and routing data you choose, and for ntfy if you turn it on), and a location foreground service for navigation and track recording. Needs Android 15 or newer on a 64-bit ARM phone.
 
-  Google-free and de-Googled: no Google Play services, Firebase or other Google services, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
+  Google-free and de-Googled: no Google Play services, Firebase or Google location library, and the app never contacts Google. It works the same on de-Googled phones (GrapheneOS, CalyxOS, /e/OS, LineageOS without Google apps).
 
-  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. Your location, searches and routes never leave the phone; no Google or microG location library is included.
+  Telemetry-free: no analytics, crash reporting, usage stats or tracking of any kind. Your location, searches and routes never leave the phone.
 
   Open source and built in the open: MapsCtrl is a one-person project by VoidedKN0X, much of it written with the help of AI (Claude). Every release is built from the public code by GitHub Actions and signed with the same key.
-
 # SHA-256 of the release signing certificate. APKs signed by any other key are
 # rejected and nothing is published (scripts/add_apk.py and fdroid update).
 AllowedAPKSigningKeys:

@@ -47,18 +47,8 @@ jobs:
             fi
             name=${app#*/}
             git clone -q --depth 1 --filter=blob:none --no-checkout "https://github.com/$app" "src/$name"
-            git -C "src/$name" sparse-checkout set --no-cone /app/src/main/res/ /app/build.gradle.kts \
-              /android/libs/branding/src/main/res/ /android/build.gradle
+            git -C "src/$name" sparse-checkout set --no-cone /app/src/main/res/ /app/build.gradle.kts
             git -C "src/$name" checkout -q
-            # MapsCtrl (an Organic Maps fork) keeps its Android app under android/, with the
-            # launcher icon in the branding module and the app id in android/build.gradle.
-            # Lay those out the way render_icons.py expects.
-            if [ ! -f "src/$name/app/build.gradle.kts" ] && [ -f "src/$name/android/build.gradle" ]; then
-              id=$(grep -oP "appId\s*=\s*'\K[A-Za-z0-9_.]+" "src/$name/android/build.gradle" | head -1)
-              mkdir -p "src/$name/app/src/main"
-              cp -r "src/$name/android/libs/branding/src/main/res" "src/$name/app/src/main/res"
-              printf 'android { defaultConfig { applicationId = "%s" } }\n' "$id" > "src/$name/app/build.gradle.kts"
-            fi
             # render_icons.py only prints a validated package name
             pkg=$(python scripts/render_icons.py "src/$name" "src/$name.svg")
             mkdir -p "metadata/$pkg/en-US"
