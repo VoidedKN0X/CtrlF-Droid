@@ -4,6 +4,10 @@ Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the C
 
 ## 2026-11-13
 
+### Removed
+
+- **LauncherCtrl** is no longer part of the Ctrl series and is gone from this repo. If you installed it, switch your home screen back first (Settings > Apps > Default apps > Home app), then uninstall it.
+
 ### Changed
 
 - **MapsCtrl** is rebuilt from scratch as its own app: OpenStreetMap maps drawn with Mapsforge in MapsCtrl's own style, and offline routing with BRouter. Its listing now says GPL-3.0 and describes the new app. Version 0.3.0 installs as an update; maps from earlier versions need to be downloaded again.

@@ -14,7 +14,6 @@ VoidedKN0X/FrigateCtrl
 VoidedKN0X/GalleryCtrl
 VoidedKN0X/ImmichCtrl
 VoidedKN0X/JellyCtrl
-VoidedKN0X/LauncherCtrl
 VoidedKN0X/LijnCtrl
 VoidedKN0X/LumenCtrl
 VoidedKN0X/MailCtrl
