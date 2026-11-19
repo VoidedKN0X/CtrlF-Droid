@@ -2,6 +2,12 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-11-19
+
+### Fixed
+
+- **The repo updates again.** Since TalkCtrl was added on 12 November, almost every update run stopped before signing anything: TalkCtrl's listing had a colon in its one-line summary ("Cardo intercoms: settings, …"), which made the file invalid, and one app failing its checks holds back the whole update. The apps in the repo stayed as they were, so new versions of the other apps didn't show up in your F-Droid client, and GitHub sent a "run failed" mail every three hours. The summary is now quoted and the listing reads correctly.
+
 ## 2026-11-13
 
 ### Removed

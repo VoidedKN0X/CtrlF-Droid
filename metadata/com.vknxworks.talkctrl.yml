@@ -8,7 +8,7 @@ IssueTracker: https://github.com/VoidedKN0X/TalkCtrl/issues
 Changelog: https://github.com/VoidedKN0X/TalkCtrl/releases
 Donate: https://github.com/sponsors/VoidedKN0X
 Name: TalkCtrl
-Summary: Private app for Cardo intercoms: settings, FM radio and firmware updates
+Summary: "Private app for Cardo intercoms: settings, FM radio and firmware updates"
 Description: |
   Controls Cardo motorcycle intercoms (Packtalk, Freecom, Spirit) over Bluetooth, without a Cardo account.
 
