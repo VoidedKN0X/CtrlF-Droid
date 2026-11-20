@@ -2,6 +2,23 @@
 
 Changes to the CtrlF-Droid repo itself: how it checks, signs and publishes the Ctrl apps. Each app's own changes are in that app's changelog and show up as "What's new" in your F-Droid client.
 
+## 2026-11-20
+
+### Fixed
+
+- **A GitHub hiccup can no longer make an app vanish from the repo.** Until now, when downloading an app's latest release failed for any reason (GitHub briefly down, a rate limit, a broken connection), the update run printed "No APK found", carried on, and signed and published an index without that app. In your F-Droid client the app then looked removed until a later run brought it back. The run now asks GitHub for each app's latest release first and tells the cases apart: only "this app has no release yet" (GitHub answers 404) or "its latest release has no APK" skips the app. Anything else is tried up to four times (waiting 15, 30 and 45 seconds in between) and then stops the run before anything is signed or published, so the current repo stays live. It also checks that it got as many APKs as the release lists, and the APK and the "What's new" text now always come from the same release.
+
+### Security
+
+- **Published apps are compared with the live repo before every publish.** A new script, `scripts/check_published.py`, fetches the index that is live right now and checks that every app in it is still there, once on the checked APKs before the signing key is touched and once more on the index `fdroid update` wrote, before the website is built. If an app that is live and still in `apps.txt` would be missing (for example because its latest release lost its APK), the run stops and nothing is published. An app only leaves the repo when you take its line out of `apps.txt` or delete its listing. If the live index can't be read after four attempts the run stops too; only a plain "not found" (nothing published yet) lets it through, with a warning. The live index is used as a list of app names and nothing else.
+
+### Project
+
+- **Mistakes in a listing are caught in the first seconds of a run.** A new first step, `scripts/check_metadata.py`, reads `apps.txt` and every `metadata/*.yml` before anything is downloaded and names each problem in its own error: a line in `apps.txt` that isn't `owner/repo` or is there twice, a listing that isn't valid YAML (like the colon in TalkCtrl's summary that held back every update from 12 to 19 November), a missing `Name` or `Summary`, a `SourceCode` that isn't a `https://github.com/<owner>/<repo>` link, an `AllowedAPKSigningKeys` that isn't a list of SHA-256 fingerprints, two listings for the same repo, or an app in `apps.txt` without a listing. A listing whose app isn't in `apps.txt` is only a warning. It uses the YAML reader that is already installed with the F-Droid tools, so nothing new is installed. One bad listing still holds back the whole update, as before; it is now just named clearly and at once.
+- The README's "How it works" and "Maintaining" and SECURITY.md describe the new checks and how to remove an app on purpose.
+
+Nothing changes in the apps, the signing key or the website. These workflow changes were checked with test doubles for GitHub and for the live index, not yet in a real run; the first run after this lands is the real test.
+
 ## 2026-11-19
 
 ### Fixed

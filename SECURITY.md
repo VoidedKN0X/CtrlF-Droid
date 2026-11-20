@@ -21,5 +21,6 @@ Describe what you found and how to reproduce it. Only the maintainer can see the
 ## How the repo is protected
 
 - Every app is pinned to the SHA-256 fingerprint of its release signing certificate in `metadata/<package>.yml` (`AllowedAPKSigningKeys`). Before anything is signed, every APK is checked with Google's `apksigner`, and a self-test makes sure forged APKs are rejected. If any check fails, nothing is published and the current repo stays live.
+- An app can't quietly drop out of the repo. A failed download is retried and then stops the run, and before anything is published the new set of apps is compared with the repo that is live: if an app that is still in `apps.txt` would be missing, nothing is published and the current repo stays live. The live index is only read as a list of app names for this comparison; nothing from it is published.
 - The repo index is signed by the official F-Droid tools with the CtrlF-Droid key, which only exists in GitHub Actions secrets and is deleted from the runner straight after signing.
 - Workflows use pinned actions and the least permissions they need.

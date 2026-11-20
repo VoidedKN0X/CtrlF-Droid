@@ -35,6 +35,11 @@ jobs:
         # to exact versions with sha256 hashes, and pip refuses anything else.
         run: pip install --require-hashes -r .github/fdroid-requirements.txt
 
+      - name: Check the listings
+        # A quick read of apps.txt and every metadata/*.yml, so a typo in a listing
+        # is named in the first seconds of the run instead of surfacing later.
+        run: python scripts/check_metadata.py
+
       - name: Find apksigner
         # add_apk.py and `fdroid update` both verify APK signatures with this
         # apksigner. Without it fdroid would silently fall back to jarsigner, which
@@ -59,13 +64,54 @@ jobs:
           echo "Using apksigner $("$bt/apksigner" --version) from $bt"
 
       - name: Download and check the latest APK and release notes of every app
+        # Fails closed: only "this app has no release yet" (GitHub answers 404) or "its
+        # latest release has no .apk" skips an app. Any other error is retried and then
+        # stops the run, so a GitHub hiccup can't publish an index with an app missing.
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           mkdir -p repo/icons
           cp assets/icon.png repo/icons/icon.png
+          tries=4
           failed=0
+
+          # Writes the latest release of repo $1 as JSON to file $2.
+          # Returns 0 when it has one, 2 when it has none (HTTP 404), 1 on any other error.
+          latest_release() {
+            local n err="$RUNNER_TEMP/gh-api.err"
+            for n in $(seq 1 "$tries"); do
+              if gh api "repos/$1/releases/latest" > "$2" 2> "$err"; then
+                return 0
+              fi
+              cat "$err" >&2
+              if grep -q '(HTTP 404)' "$err"; then
+                return 2
+              fi
+              if [ "$n" -lt "$tries" ]; then
+                echo "Attempt $n of $tries failed; trying again in $((n * 15))s"
+                sleep "$((n * 15))"
+              fi
+            done
+            return 1
+          }
+
+          # Downloads every .apk of release $2 of repo $1 into the emptied folder $3.
+          download_apks() {
+            local n
+            for n in $(seq 1 "$tries"); do
+              rm -rf "$3" && mkdir -p "$3"
+              if gh release download "$2" --repo "$1" --pattern '*.apk' --dir "$3"; then
+                return 0
+              fi
+              if [ "$n" -lt "$tries" ]; then
+                echo "Attempt $n of $tries failed; trying again in $((n * 15))s"
+                sleep "$((n * 15))"
+              fi
+            done
+            return 1
+          }
+
           while read -r app; do
             if ! [[ "$app" =~ ^[A-Za-z0-9-]+/[A-Za-z0-9._-]+$ ]]; then
               echo "::error::Bad line in apps.txt: $app"
@@ -74,14 +120,48 @@ jobs:
             fi
             echo "::group::$app"
             dl="$RUNNER_TEMP/dl/${app#*/}"
-            rm -rf "$dl" && mkdir -p "$dl"
-            if ! gh release download --repo "$app" --pattern '*.apk' --dir "$dl"; then
-              echo "::warning::No APK found in the latest release of $app"
+            release="$RUNNER_TEMP/release.json"
+            status=0
+            latest_release "$app" "$release" || status=$?
+            if [ "$status" = 2 ]; then
+              # The published-apps check below still stops the run if this app is in the live repo.
+              echo "::warning::$app has no release yet; skipped"
+              echo "::endgroup::"
+              continue
+            elif [ "$status" != 0 ]; then
+              echo "::error::Couldn't read the latest release of $app from GitHub after $tries attempts"
+              failed=1
+              echo "::endgroup::"
+              break  # GitHub is having trouble; don't spend minutes retrying every other app
+            fi
+            tag=$(jq -r '.tag_name // ""' "$release")
+            expected=$(jq -r '[.assets[]?.name | select(endswith(".apk"))] | length' "$release")
+            if [ -z "$tag" ] || [[ "$tag" == -* ]]; then
+              echo "::error::The latest release of $app has no usable tag"
+              failed=1
+              echo "::endgroup::"
+              continue
+            fi
+            if [ "$expected" = 0 ]; then
+              echo "::warning::No APK found in the latest release of $app; skipped"
+              echo "::endgroup::"
+              continue
+            fi
+            if ! download_apks "$app" "$tag" "$dl"; then
+              echo "::error::Couldn't download the APK of $app after $tries attempts"
+              failed=1
+              echo "::endgroup::"
+              break
+            fi
+            got=$(find "$dl" -maxdepth 1 -type f -name '*.apk' | wc -l)
+            if [ "$got" != "$expected" ]; then
+              echo "::error::Expected $expected APK(s) from the latest release of $app but got $got"
+              failed=1
               echo "::endgroup::"
               continue
             fi
             # The release notes become the app's "What's new" in F-Droid clients.
-            gh release view --repo "$app" --json body --jq .body > "$RUNNER_TEMP/notes.md" || : > "$RUNNER_TEMP/notes.md"
+            jq -r '.body // ""' "$release" > "$RUNNER_TEMP/notes.md"
             for apk in "$dl"/*.apk; do
               # Checks package name, source repo and signing certificate, then
               # moves the APK into repo/ under a safe name.
@@ -90,10 +170,18 @@ jobs:
             echo "::endgroup::"
           done < <(grep -v '^#' apps.txt | sed '/^$/d')
           if [ "$failed" != 0 ]; then
-            echo "::error::An APK failed its checks. Nothing was signed or published; the current repo stays live."
+            echo "::error::A download failed or an APK failed its checks. Nothing was signed or published; the current repo stays live."
             exit 1
           fi
           ls -la repo
+
+      - name: Check that no published app would go missing
+        # Compares the checked APKs with the index that is live right now, before the
+        # signing key is touched. An app only leaves the repo when it is taken out of apps.txt.
+        run: |
+          set -euo pipefail
+          python scripts/check_published.py fetch "$RUNNER_TEMP/published-index-v1.json"
+          python scripts/check_published.py apks "$RUNNER_TEMP/published-index-v1.json" repo
 
       - name: Self-test the APK checks
         # Feeds forged copies of a real APK to the same checks and stops here,
@@ -145,6 +233,11 @@ jobs:
       - name: Remove the signing key
         if: always()
         run: rm -f keystore.p12
+
+      - name: Check the new index against the published one
+        # The same check again on the index fdroid just wrote: every app that is
+        # live now and still in apps.txt must be in it, or nothing is published.
+        run: python scripts/check_published.py index "$RUNNER_TEMP/published-index-v1.json" repo/index-v1.json
 
       - name: Build the website
         run: python scripts/build_site.py "$FINGERPRINT"

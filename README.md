@@ -71,16 +71,19 @@ F-Droid is an app store for free and open-source Android apps. You don't need a 
 
 Every 3 hours (and on every push), a GitHub Actions workflow:
 
-1. Downloads the latest release APK of each app listed in [`apps.txt`](apps.txt), and turns its release notes into the app's "What's new".
-2. Checks every APK before it goes in: its package must belong to the repo it came from, and its signature must verify with Google's `apksigner` and come from that app's own release key (pinned in `AllowedAPKSigningKeys`). A built-in self-test checks that forged APKs are rejected. If any check fails, nothing is published and the current repo stays live.
-3. Runs `fdroid update` from the official [F-Droid tools](https://gitlab.com/fdroid/fdroidserver) to build and sign the repo index.
-4. Publishes the repo and the landing page to GitHub Pages. The landing page lists every app in the signed index, with the number of apps next to the Apps heading.
+1. Reads [`apps.txt`](apps.txt) and every listing in `metadata/`, and stops straight away if one of them has a mistake in it.
+2. Downloads the latest release APK of each app listed in `apps.txt`, and turns its release notes into the app's "What's new". If GitHub doesn't answer or a download breaks off, it tries again a few times and then stops; an app is only skipped when it has no release, or no APK in its latest release.
+3. Checks every APK before it goes in: its package must belong to the repo it came from, and its signature must verify with Google's `apksigner` and come from that app's own release key (pinned in `AllowedAPKSigningKeys`). A built-in self-test checks that forged APKs are rejected. If any check fails, nothing is published and the current repo stays live.
+4. Compares the apps it has with the repo that is live right now, once before signing and once on the finished index. If an app that is live and still in `apps.txt` would be missing, nothing is published and the current repo stays live.
+5. Runs `fdroid update` from the official [F-Droid tools](https://gitlab.com/fdroid/fdroidserver) to build and sign the repo index.
+6. Publishes the repo and the landing page to GitHub Pages. The landing page lists every app in the signed index, with the number of apps next to the Apps heading.
 
 The APKs are the same signed builds as on each app's Releases page.
 
 ## Maintaining
 
 - **Add an app:** add its `owner/repo` to `apps.txt` and a store listing in `metadata/<package name>.yml`, including `SourceCode: https://github.com/<owner>/<repo>` and `AllowedAPKSigningKeys` with the SHA-256 of the app's release certificate (`python scripts/apk_signers.py <app>.apk` prints it).
+- **Remove an app:** take its line out of `apps.txt` (and delete its listing in `metadata/` if you like). An app that is still in `apps.txt` but has lost its release or its APK stops the update run on purpose, so it can't quietly vanish from the repo.
 - **An app's signing key changed:** the update run fails on purpose. Put the new SHA-256 in that app's `AllowedAPKSigningKeys`.
 - **Update now:** Actions → *Update F-Droid repo* → *Run workflow*.
 - **Signing:** the repo index is signed with the key in the `REPO_KEYSTORE_BASE64` and `REPO_KEYSTORE_PASSWORD` secrets and the `REPO_KEY_ALIAS` variable. Never change this key, or users have to re-add the repo.
